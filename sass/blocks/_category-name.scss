@@ -7,6 +7,7 @@ $media: ("tablet": 768px,
         "desktop-sd": 1440px,
         "desktop-hd": 1920px);
 
+
 .category-name {
     @include font (700, 14px, 17px, #24A3FF);
     letter-spacing: 1px;
@@ -34,29 +35,20 @@ $media: ("tablet": 768px,
     }
 }
 
-
-
-
-
-
-
-
-
 @media (min-width: map.get($media, tablet))  {
-
+    .category-name__header {
+        font-size: 38px;
+        line-height: 46px;
+    }
 }
 
-@media (min-width: map.get($media, laptop))  {
 
-}
 
-@media (min-width: map.get($media, desktop-sd)) {
 
-}
 
-@media (min-width: map.get($media, desktop-hd)) {
 
-}
+
+
 
 
 

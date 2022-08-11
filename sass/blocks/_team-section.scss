@@ -47,22 +47,43 @@ $media: ("tablet": 768px,
     }
 }
 
-
-
-
-
 @media (min-width: map.get($media, tablet))  {
-
+    .team-section__photo {
+        background-image: url("../images/partner-tablet.png");
+    }
 }
 
 @media (min-width: map.get($media, laptop))  {
+    .team-section {
 
+        &__photo {
+            background-image: url("../images/partner-laptop.png");
+            height: 528px;
+            min-width: 400px;
+            flex-grow: 1;
+        }
+
+        &__article {
+            flex-grow: 2;
+        }
+
+        &__card {
+            flex-direction: row;
+        }
+    }
 }
 
 @media (min-width: map.get($media, desktop-sd)) {
-
+    .team-section__photo {
+        background-image: url("../images/partner-desktop.png");
+        height: 344px;
+        max-width: 400px;
+    }   
 }
 
 @media (min-width: map.get($media, desktop-hd)) {
-
+    .team-section__photo {
+        background-image: url("../images/partner-desktop-hd.png");
+        height: 298px;
+    }
 }

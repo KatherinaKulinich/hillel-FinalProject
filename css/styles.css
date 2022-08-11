@@ -395,6 +395,38 @@ h3, h4 {
   color: #B3B3BA;
 }
 
+@media (min-width: 768px) {
+  .team-section__photo {
+    background-image: url("../images/partner-tablet.png");
+  }
+}
+@media (min-width: 1024px) {
+  .team-section__photo {
+    background-image: url("../images/partner-laptop.png");
+    height: 528px;
+    min-width: 400px;
+    flex-grow: 1;
+  }
+  .team-section__article {
+    flex-grow: 2;
+  }
+  .team-section__card {
+    flex-direction: row;
+  }
+}
+@media (min-width: 1440px) {
+  .team-section__photo {
+    background-image: url("../images/partner-desktop.png");
+    height: 344px;
+    max-width: 400px;
+  }
+}
+@media (min-width: 1920px) {
+  .team-section__photo {
+    background-image: url("../images/partner-desktop-hd.png");
+    height: 298px;
+  }
+}
 .category-name {
   font-weight: 700;
   font-size: 14px;
@@ -422,4 +454,11 @@ h3, h4 {
   background: linear-gradient(to right, #F0145A, 20%, #EF8080);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+@media (min-width: 768px) {
+  .category-name__header {
+    font-size: 38px;
+    line-height: 46px;
+  }
 }
