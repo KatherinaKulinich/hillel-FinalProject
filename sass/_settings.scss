@@ -1,0 +1,41 @@
+@use "sass:map";
+
+$media: ("tablet": 768px,
+        "laptop": 1024px,
+        "desktop-sd": 1440px,
+        "desktop-hd": 1920px);
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.wrapper {
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+@media (min-width: map.get($media, tablet))  {
+    .wrapper {
+        margin-left: 60px;
+        margin-right: 60px;
+    }
+}
+
+@media (min-width: map.get($media, laptop))  {
+
+}
+
+@media (min-width: map.get($media, desktop-sd)) {
+
+}
+
+@media (min-width: map.get($media, desktop-hd)) {
+    .wrapper {
+        margin-left: 160px;
+        margin-right: 160px;
+    }
+}
