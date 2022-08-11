@@ -22,19 +22,9 @@ $media: ("tablet": 768px,
 }
 
 
-
 @media (min-width: map.get($media, tablet))  {
-
+    .publications-section__category {
+        margin-bottom: 10px;
+    }
 }
 
-@media (min-width: map.get($media, laptop))  {
-
-}
-
-@media (min-width: map.get($media, desktop-sd)) {
-
-}
-
-@media (min-width: map.get($media, desktop-hd)) {
-
-}

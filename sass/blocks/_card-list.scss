@@ -16,10 +16,11 @@ $media: ("tablet": 768px,
     &__item {
         background-color: #FFFFFF;
         border-radius: 8px;
+        overflow: hidden;
     }
 
     &__image {
-
+        
         &--associate {
             @include bc-img ("../images/associate.png");
             height: 200px;
@@ -46,17 +47,47 @@ $media: ("tablet": 768px,
 
 
 @media (min-width: map.get($media, tablet))  {
+    .card-list {
+        flex-direction: row;
+        flex-wrap: wrap;
 
+        &__item:nth-child(1),
+        &__item:nth-child(2) {
+            flex-grow: 1;
+            width: 309px;
+        }
+
+        &__item:nth-child(3) {
+            flex-grow: 2;
+            width: 648px;
+        }
+    }
 }
 
 @media (min-width: map.get($media, laptop))  {
+    .card-list {
 
+        &__item {
+            max-width: 281px;
+            flex-grow: 0;
+        }
+    }
 }
 
 @media (min-width: map.get($media, desktop-sd)) {
+    .card-list {
 
+        &__item {
+            max-width: 420px;
+        }
+    }
 }
 
 @media (min-width: map.get($media, desktop-hd)) {
-
+    .card-list {
+        justify-content: space-between;
+        &__item {
+            max-width: 513px;
+        }
+    }
 }

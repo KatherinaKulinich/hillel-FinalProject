@@ -15,19 +15,23 @@ $media: ("tablet": 768px,
     &__card {
         display: flex;
         flex-direction: column;
-        border-radius: 12px;
-        overflow: hidden;
         padding-bottom: 30px;
     }
 
     &__photo {
         height: 500px;
         @include bc-img ("../images/partner-mobile.png");
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+        overflow: hidden;
     }
 
     &__article {
         padding: 30px;
         background-color: #F5F5FA;
+        border-bottom-left-radius: 12px;
+        border-bottom-right-radius: 12px;
+        overflow: hidden;
     }
 
     &__category {
@@ -61,6 +65,7 @@ $media: ("tablet": 768px,
         &__photo {
             background-image: url("../images/partner-laptop.png");
             min-width: 400px;
+            
         }
 
         &__article {
@@ -77,11 +82,13 @@ $media: ("tablet": 768px,
     .team-section__photo {
         background-image: url("../images/partner-desktop.png");
         max-width: 400px;
+        
     }   
 }
 
 @media (min-width: map.get($media, desktop-hd)) {
     .team-section__photo {
         background-image: url("../images/partner-desktop-hd.png");
+        
     }
 }
