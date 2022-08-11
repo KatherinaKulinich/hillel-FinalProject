@@ -21,28 +21,6 @@ $media: ("tablet": 768px,
     }
 }
 
-.card-list {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-
-    &__item {
-        background-color: #FFFFFF;
-        border-radius: 8px
-    }
-
-    &__image {
-        @include bc-img ("../images/associate.png");
-        height: 200px;
-    }
-}
-
-
-
-
-
-
-
 
 
 @media (min-width: map.get($media, tablet))  {

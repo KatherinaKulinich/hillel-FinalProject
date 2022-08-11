@@ -1,0 +1,48 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+@use "sass:map";
+
+$media: ("tablet": 768px,
+        "laptop": 1024px,
+        "desktop-sd": 1440px,
+        "desktop-hd": 1920px);
+
+.card-data {
+    padding: 30px;
+
+    &__header {
+        @include font (700, 16px, 19px, $headerColor);
+        margin-bottom: 15px;
+    }
+
+    &__date {
+        @include font (700, 12px, 15px, #B3B3BA);
+        letter-spacing: 1px;
+        display: inline-block;
+        margin-bottom: 15px;
+    }
+
+    &__text {
+        @include font (400, 14px, 22px, #000000);
+        padding-top: 15px;
+        border-top: 4px solid #E6E6F0;
+        margin-bottom: 0;
+    }
+}
+
+
+@media (min-width: map.get($media, tablet))  {
+
+}
+
+@media (min-width: map.get($media, laptop))  {
+
+}
+
+@media (min-width: map.get($media, desktop-sd)) {
+
+}
+
+@media (min-width: map.get($media, desktop-hd)) {
+
+}

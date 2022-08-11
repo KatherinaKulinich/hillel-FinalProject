@@ -1,0 +1,62 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+@use "sass:map";
+
+$media: ("tablet": 768px,
+        "laptop": 1024px,
+        "desktop-sd": 1440px,
+        "desktop-hd": 1920px);
+
+
+.card-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    &__item {
+        background-color: #FFFFFF;
+        border-radius: 8px;
+    }
+
+    &__image {
+
+        &--associate {
+            @include bc-img ("../images/associate.png");
+            height: 200px;
+        }
+
+        &--gdpr {
+            @include bc-img ("../images/gdpr.png");
+            height: 200px;
+        }
+
+        &--testament {
+            @include bc-img ("../images/testament.png");
+            height: 200px;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+@media (min-width: map.get($media, tablet))  {
+
+}
+
+@media (min-width: map.get($media, laptop))  {
+
+}
+
+@media (min-width: map.get($media, desktop-sd)) {
+
+}
+
+@media (min-width: map.get($media, desktop-hd)) {
+
+}
