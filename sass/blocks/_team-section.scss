@@ -1,0 +1,68 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+@use "sass:map";
+
+$media: ("tablet": 768px,
+        "laptop": 1024px,
+        "desktop-sd": 1440px,
+        "desktop-hd": 1920px);
+
+.team-section {
+    padding-top: 50px;
+    padding-bottom: 60px;
+    background-color: #FFFFFF;
+
+    &__card {
+        display: flex;
+        flex-direction: column;
+        border-radius: 12px;
+        overflow: hidden;
+    }
+
+    &__photo {
+        height: 500px;
+        @include bc-img ("../images/partner-mobile.png");
+    }
+
+    &__article {
+        padding: 30px;
+        background-color: #F5F5FA;
+    }
+
+    &__category {
+        margin-bottom: 5px;
+    }
+
+    &__header {
+        margin-bottom: 30px;
+    }
+
+    &__author {
+        margin-bottom: 6px;
+        @include font (700, 16px, 19px, #B3B3BA)
+    }
+
+    &__position {
+        @include font (400, 14px, 22px, #B3B3BA)
+    }
+}
+
+
+
+
+
+@media (min-width: map.get($media, tablet))  {
+
+}
+
+@media (min-width: map.get($media, laptop))  {
+
+}
+
+@media (min-width: map.get($media, desktop-sd)) {
+
+}
+
+@media (min-width: map.get($media, desktop-hd)) {
+
+}

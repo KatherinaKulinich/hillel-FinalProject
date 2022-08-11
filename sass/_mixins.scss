@@ -1,0 +1,13 @@
+@mixin font ($fw, $fs, $lh, $col) {
+    font-weight: $fw;
+    font-size: $fs;
+    line-height: $lh;
+    color: $col;
+}
+
+@mixin bc-img ($url){
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("#{$url}");
+}

@@ -329,6 +329,13 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
+p,
+h2,
+h3, h4 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 .wrapper {
   margin-left: 30px;
   margin-right: 30px;
@@ -345,4 +352,45 @@ body {
     margin-left: 160px;
     margin-right: 160px;
   }
+}
+.team-section {
+  padding-top: 50px;
+  padding-bottom: 60px;
+  background-color: #FFFFFF;
+}
+.team-section__card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.team-section__photo {
+  height: 500px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("../images/partner-mobile.png");
+}
+.team-section__article {
+  padding: 30px;
+  background-color: #F5F5FA;
+}
+.team-section__category {
+  margin-bottom: 5px;
+}
+.team-section__header {
+  margin-bottom: 30px;
+}
+.team-section__author {
+  margin-bottom: 6px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  color: #B3B3BA;
+}
+.team-section__position {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  color: #B3B3BA;
 }
