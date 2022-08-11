@@ -1,0 +1,63 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+@use "sass:map";
+
+$media: ("tablet": 768px,
+        "laptop": 1024px,
+        "desktop-sd": 1440px,
+        "desktop-hd": 1920px);
+
+.category-name {
+    @include font (700, 14px, 17px, #24A3FF);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+
+    &:hover {
+        color: #F0145A; 
+    }
+
+    &::after {
+        content: url('../images/arrow.png');
+    }
+
+    &:hover::after {
+        content: url('../images/arrow-hover.png');
+    }
+
+    &__header {
+        @include font (700, 30px, 36px, 0);
+        background: linear-gradient(to right, #F0145A, 20%, #EF8080);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
+
+
+
+
+
+
+
+
+
+@media (min-width: map.get($media, tablet))  {
+
+}
+
+@media (min-width: map.get($media, laptop))  {
+
+}
+
+@media (min-width: map.get($media, desktop-sd)) {
+
+}
+
+@media (min-width: map.get($media, desktop-hd)) {
+
+}
+
+
+
+

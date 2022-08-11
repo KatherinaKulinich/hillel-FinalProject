@@ -394,3 +394,32 @@ h3, h4 {
   line-height: 22px;
   color: #B3B3BA;
 }
+
+.category-name {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  color: #24A3FF;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-block;
+}
+.category-name:hover {
+  color: #F0145A;
+}
+.category-name::after {
+  content: url("../images/arrow.png");
+}
+.category-name:hover::after {
+  content: url("../images/arrow-hover.png");
+}
+.category-name__header {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  color: 0;
+  background: linear-gradient(to right, #F0145A, 20%, #EF8080);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
