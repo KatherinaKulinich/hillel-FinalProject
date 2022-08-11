@@ -1,0 +1,21 @@
+@use "./variables" as *;
+
+.slider {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+
+    &__button {
+        height: 16px;
+        width: 16px;
+        border-radius: 50%;
+        background-color: $headerColor;
+        border: none;
+        opacity: 20%;
+
+        &--active {
+            opacity: 100%;
+        }
+    }
+}
+

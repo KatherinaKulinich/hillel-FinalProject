@@ -17,6 +17,7 @@ $media: ("tablet": 768px,
         flex-direction: column;
         border-radius: 12px;
         overflow: hidden;
+        padding-bottom: 30px;
     }
 
     &__photo {
@@ -39,11 +40,12 @@ $media: ("tablet": 768px,
 
     &__author {
         margin-bottom: 6px;
-        @include font (700, 16px, 19px, #B3B3BA)
+        @include font (700, 16px, 19px, #B3B3BA);
     }
 
     &__position {
-        @include font (400, 14px, 22px, #B3B3BA)
+        @include font (400, 14px, 22px, #B3B3BA);
+        margin-bottom:0;
     }
 }
 
@@ -58,13 +60,11 @@ $media: ("tablet": 768px,
 
         &__photo {
             background-image: url("../images/partner-laptop.png");
-            height: 528px;
             min-width: 400px;
-            flex-grow: 1;
         }
 
         &__article {
-            flex-grow: 2;
+
         }
 
         &__card {
@@ -76,7 +76,6 @@ $media: ("tablet": 768px,
 @media (min-width: map.get($media, desktop-sd)) {
     .team-section__photo {
         background-image: url("../images/partner-desktop.png");
-        height: 344px;
         max-width: 400px;
     }   
 }
@@ -84,6 +83,5 @@ $media: ("tablet": 768px,
 @media (min-width: map.get($media, desktop-hd)) {
     .team-section__photo {
         background-image: url("../images/partner-desktop-hd.png");
-        height: 298px;
     }
 }

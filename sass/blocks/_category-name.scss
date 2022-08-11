@@ -9,7 +9,7 @@ $media: ("tablet": 768px,
 
 
 .category-name {
-    @include font (700, 14px, 17px, #24A3FF);
+    @include font (700, 14px, 17px, $headerColor);
     letter-spacing: 1px;
     text-transform: uppercase;
     text-decoration: none;
