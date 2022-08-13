@@ -2,7 +2,7 @@
 @use "../../mixins" as *;
 @use "sass:map";
 
-$media: ("tablet": 768px,
+$screen: ("tablet": 768px,
         "laptop": 1024px,
         "desktop-sd": 1440px,
         "desktop-hd": 1920px);
@@ -53,7 +53,7 @@ $media: ("tablet": 768px,
     }
 }
 
-@media (min-width: map.get($media, laptop))  {
+@media (min-width: map.get($screen, laptop))  {
     .team-section {
         &__card {
             flex-direction: row;
@@ -73,13 +73,13 @@ $media: ("tablet": 768px,
     }   
 }
 
-@media (min-width: map.get($media, desktop-sd)) {
+@media (min-width: map.get($screen, desktop-sd)) {
     .team-section__photo {
         height: 344px;
     }
 }
 
-@media (min-width: map.get($media, desktop-hd)) {
+@media (min-width: map.get($screen, desktop-hd)) {
     .team-section__photo {
         height: 298px;
     }

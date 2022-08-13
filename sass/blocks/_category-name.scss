@@ -2,7 +2,7 @@
 @use "../mixins" as *;
 @use "sass:map";
 
-$media: ("tablet": 768px,
+$screen: ("tablet": 768px,
         "laptop": 1024px,
         "desktop-sd": 1440px,
         "desktop-hd": 1920px);
@@ -35,7 +35,7 @@ $media: ("tablet": 768px,
     }
 }
 
-@media (min-width: map.get($media, tablet))  {
+@media (min-width: map.get($screen, tablet))  {
     .category-name__header {
         font-size: 38px;
         line-height: 46px;

@@ -1,6 +1,6 @@
 @use "sass:map";
 
-$media: ("tablet": 768px,
+$screen: ("tablet": 768px,
         "laptop": 1024px,
         "desktop-sd": 1440px,
         "desktop-hd": 1920px);
@@ -15,7 +15,8 @@ body {
 
 p,
 h2,
-h3, h4 {
+h3, 
+h4 {
     margin-top: 0;
 }
 
@@ -24,14 +25,14 @@ h3, h4 {
     margin-right: 30px;
 }
 
-@media (min-width: map.get($media, tablet))  {
+@media (min-width: map.get($screen, tablet))  {
     .wrapper {
         margin-left: 60px;
         margin-right: 60px;
     }
 }
 
-@media (min-width: map.get($media, desktop-hd)) {
+@media (min-width: map.get($screen, desktop-hd)) {
     .wrapper {
         width: 1600px;
         margin-left: auto;

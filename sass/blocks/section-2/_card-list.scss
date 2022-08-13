@@ -2,7 +2,7 @@
 @use "../../mixins" as *;
 @use "sass:map";
 
-$media: ("tablet": 768px,
+$screen: ("tablet": 768px,
         "laptop": 1024px,
         "desktop-sd": 1440px,
         "desktop-hd": 1920px);
@@ -38,7 +38,7 @@ $media: ("tablet": 768px,
     }
 }
 
-@media (min-width: map.get($media, tablet))  {
+@media (min-width: map.get($screen, tablet))  {
     .card-list {
         flex-direction: row;
         flex-wrap: wrap;
@@ -56,7 +56,7 @@ $media: ("tablet": 768px,
     }
 }
 
-@media (min-width: map.get($media, laptop))  {
+@media (min-width: map.get($screen, laptop))  {
     .card-list {
 
         &__item {
