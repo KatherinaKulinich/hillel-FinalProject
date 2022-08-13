@@ -1,5 +1,5 @@
-@use "../variables" as *;
-@use "../mixins" as *;
+@use "../../variables" as *;
+@use "../../mixins" as *;
 @use "sass:map";
 
 $media: ("tablet": 768px,
@@ -20,7 +20,7 @@ $media: ("tablet": 768px,
 
     &__photo {
         height: 500px;
-        @include bc-img ("../images/partner-mobile.png");
+        @include bg-img ("../images/partner.png");
         border-top-left-radius: 12px;
         border-top-right-radius: 12px;
         overflow: hidden;
@@ -43,8 +43,8 @@ $media: ("tablet": 768px,
     }
 
     &__author {
-        margin-bottom: 6px;
         @include font (700, 16px, 19px, #B3B3BA);
+        margin-bottom: 6px;
     }
 
     &__position {
@@ -53,42 +53,34 @@ $media: ("tablet": 768px,
     }
 }
 
-@media (min-width: map.get($media, tablet))  {
-    .team-section__photo {
-        background-image: url("../images/partner-tablet.png");
-    }
-}
-
 @media (min-width: map.get($media, laptop))  {
     .team-section {
-
-        &__photo {
-            background-image: url("../images/partner-laptop.png");
-            min-width: 400px;
-            
-        }
-
-        &__article {
-
-        }
-
         &__card {
             flex-direction: row;
         }
-    }
+
+        &__photo {
+            border-bottom-left-radius: 12px;
+            border-top-right-radius: 0;
+            min-width: 400px;
+            height: 528px;
+        }
+
+        &__article {
+            border-bottom-left-radius: 0;
+            border-top-right-radius: 12px;
+        }
+    }   
 }
 
 @media (min-width: map.get($media, desktop-sd)) {
     .team-section__photo {
-        background-image: url("../images/partner-desktop.png");
-        max-width: 400px;
-        
-    }   
+        height: 344px;
+    }
 }
 
 @media (min-width: map.get($media, desktop-hd)) {
     .team-section__photo {
-        background-image: url("../images/partner-desktop-hd.png");
-        
+        height: 298px;
     }
 }

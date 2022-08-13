@@ -1,11 +1,6 @@
-@use "../variables" as *;
-@use "../mixins" as *;
-@use "sass:map";
+@use "../../variables" as *;
+@use "../../mixins" as *;
 
-$media: ("tablet": 768px,
-        "laptop": 1024px,
-        "desktop-sd": 1440px,
-        "desktop-hd": 1920px);
 
 .card-data {
     padding: 30px;
@@ -31,18 +26,3 @@ $media: ("tablet": 768px,
 }
 
 
-@media (min-width: map.get($media, tablet))  {
-
-}
-
-@media (min-width: map.get($media, laptop))  {
-
-}
-
-@media (min-width: map.get($media, desktop-sd)) {
-
-}
-
-@media (min-width: map.get($media, desktop-hd)) {
-
-}

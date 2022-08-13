@@ -1,5 +1,5 @@
-@use "../variables" as *;
-@use "../mixins" as *;
+@use "../../variables" as *;
+@use "../../mixins" as *;
 @use "sass:map";
 
 $media: ("tablet": 768px,
@@ -21,30 +21,22 @@ $media: ("tablet": 768px,
 
     &__image {
         
-        &--associate {
-            @include bc-img ("../images/associate.png");
+        &--publication-first {
+            @include bg-img ("../images/publication-1.png");
             height: 200px;
         }
 
-        &--gdpr {
-            @include bc-img ("../images/gdpr.png");
+        &--publication-second {
+            @include bg-img ("../images/publication-2.png");
             height: 200px;
         }
 
-        &--testament {
-            @include bc-img ("../images/testament.png");
+        &--publication-third {
+            @include bg-img ("../images/publication-3.png");
             height: 200px;
         }
     }
 }
-
-
-
-
-
-
-
-
 
 @media (min-width: map.get($media, tablet))  {
     .card-list {
@@ -68,26 +60,10 @@ $media: ("tablet": 768px,
     .card-list {
 
         &__item {
-            max-width: 281px;
-            flex-grow: 0;
+            flex-grow: 1;
+            min-width: 281px;
+            max-width: calc(33.33% - 20px);
         }
     }
 }
 
-@media (min-width: map.get($media, desktop-sd)) {
-    .card-list {
-
-        &__item {
-            max-width: 420px;
-        }
-    }
-}
-
-@media (min-width: map.get($media, desktop-hd)) {
-    .card-list {
-        justify-content: space-between;
-        &__item {
-            max-width: 513px;
-        }
-    }
-}

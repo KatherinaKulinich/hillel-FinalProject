@@ -4,9 +4,9 @@
 @import "./normalize";
 @import "./fonts.scss";
 @import "./settings.scss";
-@import "./blocks/team-section";
+@import "./blocks/section-1/team-section";
 @import "./blocks/category-name";
-@import "./blocks/slider.scss";
-@import "./blocks/publications-section";
-@import "./blocks/card-list";
-@import "./blocks/card-data";
+@import "./blocks/section-1/slider";
+@import "./blocks/section-2/publications-section";
+@import "./blocks/section-2/card-list";
+@import "./blocks/section-2/card-data";
