@@ -465,8 +465,8 @@ h4 {
   font-weight: 700;
   font-size: 14px;
   line-height: 17px;
-  letter-spacing: 1px;
   color: #24A3FF;
+  letter-spacing: 1px;
   text-transform: uppercase;
   text-decoration: none;
   display: inline-block;
@@ -478,17 +478,18 @@ h4 {
 }
 
 .icons-section__category::after {
-  content: url(../../images/arrow.png);
+  content: url("../images/arrow.png");
 }
 
 .icons-section__category:hover::after {
-  content: url(../../images/arrow-hover.png);
+  content: url("../images/arrow-hover.png");
 }
 
 .icons-section__header {
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
+  color: 0;
   background: linear-gradient(to right, #F0145A, 20%, #EF8080);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

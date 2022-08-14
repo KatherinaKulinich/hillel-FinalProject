@@ -1,3 +1,12 @@
+@use "../../variables" as *;
+@use "../../mixins" as *;
+@use "sass:map";
+
+$screen: ("tablet": 768px,
+          "laptop": 1024px,
+          "desktop-sd": 1440px,
+          "desktop-hd": 1920px);
+
 .icons-section {
     padding-top: 30px;
     padding-bottom: 60px;
@@ -32,11 +41,8 @@
 }
 
 .icons-section__category {
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 17px;
+    @include font (700, 14px, 17px, $headerColor);
     letter-spacing: 1px;
-    color: #24A3FF;
     text-transform: uppercase;
     text-decoration: none;
     display: inline-block;
@@ -44,29 +50,25 @@
 }
 
 .icons-section__category:hover {
-    color: #F0145A;
+    color: $hoverColor;
 }
 
 .icons-section__category::after {
-    content: url(../../images/arrow.png);
+    content: url("../images/arrow.png");
 }
 
 .icons-section__category:hover::after {
-    content: url(../../images/arrow-hover.png);
+    content: url("../images/arrow-hover.png");
 }
 
 .icons-section__header {
-    font-weight: 700;
-    font-size: 30px;
-    line-height: 36px;
-    background: linear-gradient(to right, #F0145A, 20%, #EF8080);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    @include font (700, 30px, 36px, 0);
+    @include gradient-text ();
     margin-top: 0;
     margin-bottom: 60px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: map.get($screen, tablet)) {
     .icons-section__header {
         margin-bottom: 30px;
     }

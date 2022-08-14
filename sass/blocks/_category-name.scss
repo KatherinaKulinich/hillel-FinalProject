@@ -7,7 +7,6 @@ $screen: ("tablet": 768px,
           "desktop-sd": 1440px,
           "desktop-hd": 1920px);
 
-
 .category-name {
     @include font (700, 14px, 17px, $headerColor);
     letter-spacing: 1px;
@@ -29,9 +28,7 @@ $screen: ("tablet": 768px,
 
     &__header {
         @include font (700, 30px, 36px, 0);
-        background: linear-gradient(to right, #F0145A, 20%, #EF8080);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+        @include gradient-text ();
     }
 }
 

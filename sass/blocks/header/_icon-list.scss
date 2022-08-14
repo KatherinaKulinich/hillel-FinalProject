@@ -1,3 +1,13 @@
+@use "../../variables" as *;
+@use "../../mixins" as *;
+@use "sass:map";
+
+$screen: ("tablet": 768px,
+          "laptop": 1024px,
+          "desktop-sd": 1440px,
+          "desktop-hd": 1920px);
+
+
 .icon-list {
     display: flex;
     flex-direction: column;
@@ -16,26 +26,20 @@
 }
 
 .icon-list__header {
-    font-weight: 700;
-    font-size: 22px;
-    line-height: 27px;
-    color: #24A3FF;
+    @include font (700, 22px, 27px, $headerColor);
     margin-top: 0;
     margin-bottom: 15px;
     width: 100%;
 }
 
 .icon-list__text {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 26px;
-    color: #FFFFFF;
+    @include font (400, 16px, 26px, #FFFFFF);
     margin-top: 0;
     margin-bottom: 0;
     width: 100%;
 }
 
-@media (min-width: 768px) {
+@media (min-width: map.get($screen, tablet)) {
     .icon-list__text,
     .icon-list__header {
         width: 294px;
@@ -50,24 +54,23 @@
     .icon-list__item {
         margin-bottom: 0;
     }
-
 }
 
-@media (min-width: 1024px) {
+@media (min-width: map.get($screen, laptop)) {
     .icon-list__text,
     .icon-list__header {
         width: 261px;
     }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: map.get($screen, desktop-sd)) {
     .icon-list__text,
     .icon-list__header {
         width: 400px;
     }
 }
 
-@media (min-width: 1920px) {
+@media (min-width: map.get($screen, desktop-hd)) {
     .icon-list__text,
     .icon-list__header {
         width: 493px;
