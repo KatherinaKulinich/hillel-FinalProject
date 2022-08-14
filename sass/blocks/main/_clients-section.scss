@@ -1,16 +1,14 @@
+@use "../../variables" as *;
+@use "../../mixins" as *;
+
 .clients-section {
-    padding-top: 60px;
-    padding-bottom: 60px;
     background-color: #FFFFFF;
     text-align: center;
 }
 
 .clients-section__header {
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 17px;
+    @include font (700, 14px, 17px, #323264);
     letter-spacing: 1px;
-    color: #323264;
     text-transform: uppercase;
     text-decoration: none;
     display: inline-block;
