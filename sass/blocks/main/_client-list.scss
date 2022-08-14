@@ -1,0 +1,98 @@
+@use "sass:map";
+
+$screen: ("tablet": 768px,
+        "laptop": 1024px,
+        "desktop-sd": 1440px,
+        "desktop-hd": 1920px);
+
+
+.client-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.client-list__item {
+    width: 100%;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.client-list__item--hillel {
+    background-color: #1C4280;
+}
+
+.client-list__item--wannabiz {
+    background-color: #143646
+}
+
+.client-list__item--tapgerine {
+    background-color: #F48B30;
+}
+
+.client-list__item--3d-look {
+    background-color: #9E4DC3;
+}
+
+.client-list__item--orangear {
+    background-color: #FD9339
+}
+
+.client-list__item--adtelligent {
+    background-color: #E2E2E4;
+}
+
+.client-list__item--clickky {
+    background-color: #C71C36;
+}
+
+.client-list__item--eco-leasing {
+    background-color: #DCF3F9;
+}
+
+.client-list__item--infra-tek {
+    background-color: #EAEAEA;
+}
+
+.client-list__item--city-park {
+    background-color: #282240;
+}
+
+.client-list__item--art-print {
+    background-color: #1D4568;
+}
+
+.client-list__item--ultimate {
+    background-color: #000000
+}
+
+@media (max-width: map.get($screen, tablet)) {
+    .client-list__item:nth-child(n+7) {
+        display: none;
+    }
+}
+
+@media (min-width: map.get($screen, tablet)) {
+    .client-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .client-list__item {
+        width: 33.33%;
+    }
+}
+
+@media (min-width: map.get($screen, laptop)) {
+    .client-list__item {
+        width: 25%;
+    }
+}
+
+@media (min-width: map.get($screen, desktop-hd)) {
+    .client-list {
+        overflow: hidden;
+        border-radius: 20px;
+    }
+}

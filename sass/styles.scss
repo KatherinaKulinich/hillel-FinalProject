@@ -5,9 +5,14 @@
 @import "./fonts.scss";
 @import "./settings.scss";
 
-@import "./blocks/section-1/team-section";
+@import "./blocks/header/icon-list";
+@import "./blocks/header/icons-section";
+@import "./blocks/main/team-section";
+@import "./blocks/main/slider";
+@import "./blocks/main/clients-section";
+@import "./blocks/main/client-list";
+@import "./blocks/footer/publications-section";
+@import "./blocks/footer/card-list";
+@import "./blocks/footer/card-data";
 @import "./blocks/category-name";
-@import "./blocks/section-1/slider";
-@import "./blocks/section-2/publications-section";
-@import "./blocks/section-2/card-list";
-@import "./blocks/section-2/card-data";
+
