@@ -1,0 +1,74 @@
+.icons-section {
+    padding-top: 30px;
+    padding-bottom: 60px;
+    background: linear-gradient(to bottom left, #323264, 60%, #643E72);
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    position: relative;
+}
+
+.icons-section:before{
+    content: '';
+    background-color: #CACADB;
+    height: 10px;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    position: absolute;
+    bottom: -10px;
+    left: 20px;
+    right: 20px;   
+}
+
+.icons-section::after {
+    content: '';
+    background-color: #E7E7F2;
+    height: 10px;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    position: absolute;
+    bottom: -20px;
+    left: 40px;
+    right: 40px;
+}
+
+.icons-section__category {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 1px;
+    color: #24A3FF;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.icons-section__category:hover {
+    color: #F0145A;
+}
+
+.icons-section__category::after {
+    content: url(../../images/arrow.png);
+}
+
+.icons-section__category:hover::after {
+    content: url(../../images/arrow-hover.png);
+}
+
+.icons-section__header {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 36px;
+    background: linear-gradient(to right, #F0145A, 20%, #EF8080);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-top: 0;
+    margin-bottom: 60px;
+}
+
+@media (max-width: 768px) {
+    .icons-section__header {
+        margin-bottom: 30px;
+    }
+}
+

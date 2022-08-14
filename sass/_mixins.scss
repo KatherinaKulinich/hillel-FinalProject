@@ -11,3 +11,9 @@
     background-repeat: no-repeat;
     background-image: url("#{$url}");
 }
+
+@mixin gradient-text () {
+    background: linear-gradient(to right, #F0145A, 20%, #EF8080);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

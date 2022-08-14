@@ -21,7 +21,6 @@ $screen: ("tablet": 768px,
     }
 }
 
-
 @media (min-width: map.get($screen, tablet))  {
     .publications-section__category {
         margin-bottom: 10px;
