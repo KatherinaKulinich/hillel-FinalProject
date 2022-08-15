@@ -14,21 +14,38 @@ body {
 }
 
 p,
+h1,
 h2,
 h3, 
 h4 {
     margin-top: 0;
 }
 
-.wrapper {
+.wrapper,
+.wrapper-benefits {
     margin-left: 30px;
     margin-right: 30px;
 }
 
+
+
 @media (min-width: map.get($screen, tablet))  {
-    .wrapper {
+    .wrapper,
+    .wrapper-benefits {
         margin-left: 60px;
         margin-right: 60px;
+    }
+}
+
+@media (min-width: map.get($screen, laptop)) {
+    .wrapper-scroll {
+        margin-right: 60px;
+        margin-left: 60px;
+    }
+
+    .wrapper-benefits {
+        margin-left: 0;
+        margin-right: 0;
     }
 }
 

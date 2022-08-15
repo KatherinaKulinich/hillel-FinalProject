@@ -8,7 +8,7 @@ $screen: ("tablet": 768px,
           "desktop-hd": 1920px);
 
 .icons-section {
-    padding-top: 30px;
+    padding-top: 15px;
     padding-bottom: 60px;
     border-bottom-left-radius: 12px;
     border-bottom-right-radius: 12px;
@@ -49,8 +49,14 @@ $screen: ("tablet": 768px,
 
 
 @media (max-width: map.get($screen, tablet)) {
-    .icons-section__header {
-        margin-bottom: 30px;
+    .icons-section {
+        padding-top: 30px;
+
+        &__header {
+            margin-bottom: 30px;
+        }
     }
 }
+    
+    
 

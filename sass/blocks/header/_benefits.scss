@@ -1,0 +1,130 @@
+@use "../../variables" as *;
+@use "../../mixins" as *;
+@use "sass:map";
+
+$screen: ("tablet": 768px,
+          "laptop": 1024px,
+          "desktop-sd": 1440px,
+          "desktop-hd": 1920px);
+
+.benefits {
+    display: flex;
+    flex-direction: column;
+
+    &__names {
+        display: flex;
+        gap: 30px;
+        overflow-x: auto;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    &__header {
+        @include gradient-text ();
+        @include font (700, 30px, 37px, 0);
+        margin-bottom: 0;
+        margin-left: 30px;
+    }
+
+    &__item {
+        @include font (700, 30px, 37px, #B3B3BA);
+        text-decoration: none;
+        white-space: nowrap;
+    }
+
+    &__item:hover {
+        color: $hoverColor;
+    }
+
+    &__description {
+        padding-top: 30px;
+        padding-bottom: 15px;
+        border-top: 4px solid rgba(255, 255, 255, 0.3);
+    }
+
+    &__topic {
+        @include font (700, 20px, 24px, #FFFFFF);
+        margin-bottom: 30px;
+    }
+
+    &__text {
+        @include font (400, 19px, 30px, #FFFFFF);
+        margin-bottom: 0;
+    }
+}
+
+@media (min-width: map.get($screen, tablet))  {  
+    .benefits {
+        &__names {
+            padding-top: 60px;
+            padding-bottom: 60px;
+        }
+
+        &__header {
+            margin-left: 60px;
+            font-size: 38px;
+            line-height: 46px;
+        }
+
+        &__topic {
+            font-size: 30px;
+            line-height: 37px;
+        }
+
+        &__description {
+            padding-top: 60px;
+            padding-bottom: 30px;
+        }
+
+        &__item {
+            font-size: 38px;
+            line-height: 46px;
+        }
+    }
+}
+
+@media (min-width: map.get($screen, laptop)) {
+    .benefits {
+        flex-direction: row;
+        padding-top: 70px;
+        padding-bottom: 70px;
+        align-items: center;
+        justify-content:  center;
+        column-gap: 60px; 
+
+        &__names {
+            flex-direction: column;
+            min-width: 375px;
+            padding-top: 0;
+            padding-bottom: 0;
+            text-align: right;
+        }
+
+        &__header {
+            margin-left: 0;
+        }
+
+        &__description {
+            border-top: none;
+            padding-top: 0;
+            padding-bottom: 0;
+            max-width: 581px;
+        }
+
+        &__border {
+            min-width: 4px;
+            height: 303px;
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+    }
+}
+
+@media (min-width: map.get($screen, desktop-sd))  {
+    .benefits__description {
+        max-width: 861px;
+    }
+}
+
+@media (min-width: map.get($screen, desktop-hd)) {
+    
+}

@@ -330,21 +330,34 @@ body {
 }
 
 p,
+h1,
 h2,
 h3,
 h4 {
   margin-top: 0;
 }
 
-.wrapper {
+.wrapper,
+.wrapper-benefits {
   margin-left: 30px;
   margin-right: 30px;
 }
 
 @media (min-width: 768px) {
-  .wrapper {
+  .wrapper,
+.wrapper-benefits {
     margin-left: 60px;
     margin-right: 60px;
+  }
+}
+@media (min-width: 1024px) {
+  .wrapper-scroll {
+    margin-right: 60px;
+    margin-left: 60px;
+  }
+  .wrapper-benefits {
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 @media (min-width: 1920px) {
@@ -369,6 +382,165 @@ h4 {
   background-color: #F5F5FA;
 }
 
+.starting-screen {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("../images/symbol.png");
+}
+.starting-screen__main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.starting-screen__header {
+  font-weight: 700;
+  font-size: 38px;
+  line-height: 46px;
+  color: #FFFFFF;
+  margin-top: 0;
+  margin-bottom: 0;
+  min-width: 315px;
+  max-width: 800px;
+  text-align: center;
+}
+.starting-screen__button {
+  background-image: url("../images/button.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 42px;
+  width: 42px;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  position: absolute;
+  bottom: 30px;
+}
+.starting-screen__button:hover {
+  background-image: url("../images/button-hover.png");
+  border-color: #F0145A;
+  opacity: 50%;
+}
+
+@media (min-width: 768px) {
+  .starting-screen {
+    background-size: 100vh;
+  }
+}
+.benefits {
+  display: flex;
+  flex-direction: column;
+}
+.benefits__names {
+  display: flex;
+  gap: 30px;
+  overflow-x: auto;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.benefits__header {
+  background: linear-gradient(to right, #F0145A, 20%, #EF8080);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 37px;
+  color: 0;
+  margin-bottom: 0;
+  margin-left: 30px;
+}
+.benefits__item {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 37px;
+  color: #B3B3BA;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.benefits__item:hover {
+  color: #F0145A;
+}
+.benefits__description {
+  padding-top: 30px;
+  padding-bottom: 15px;
+  border-top: 4px solid rgba(255, 255, 255, 0.3);
+}
+.benefits__topic {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  color: #FFFFFF;
+  margin-bottom: 30px;
+}
+.benefits__text {
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 30px;
+  color: #FFFFFF;
+  margin-bottom: 0;
+}
+
+@media (min-width: 768px) {
+  .benefits__names {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  .benefits__header {
+    margin-left: 60px;
+    font-size: 38px;
+    line-height: 46px;
+  }
+  .benefits__topic {
+    font-size: 30px;
+    line-height: 37px;
+  }
+  .benefits__description {
+    padding-top: 60px;
+    padding-bottom: 30px;
+  }
+  .benefits__item {
+    font-size: 38px;
+    line-height: 46px;
+  }
+}
+@media (min-width: 1024px) {
+  .benefits {
+    flex-direction: row;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    align-items: center;
+    justify-content: center;
+    column-gap: 60px;
+  }
+  .benefits__names {
+    flex-direction: column;
+    min-width: 375px;
+    padding-top: 0;
+    padding-bottom: 0;
+    text-align: right;
+  }
+  .benefits__header {
+    margin-left: 0;
+  }
+  .benefits__description {
+    border-top: none;
+    padding-top: 0;
+    padding-bottom: 0;
+    max-width: 581px;
+  }
+  .benefits__border {
+    min-width: 4px;
+    height: 303px;
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+}
+@media (min-width: 1440px) {
+  .benefits__description {
+    max-width: 861px;
+  }
+}
 .icon-list {
   display: flex;
   flex-direction: column;
@@ -422,7 +594,7 @@ h4 {
   }
 }
 .icons-section {
-  padding-top: 30px;
+  padding-top: 15px;
   padding-bottom: 60px;
   border-bottom-left-radius: 12px;
   border-bottom-right-radius: 12px;
@@ -458,6 +630,9 @@ h4 {
 }
 
 @media (max-width: 768px) {
+  .icons-section {
+    padding-top: 30px;
+  }
   .icons-section__header {
     margin-bottom: 30px;
   }
