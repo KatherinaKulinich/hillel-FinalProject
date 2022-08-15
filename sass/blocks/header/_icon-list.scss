@@ -7,72 +7,57 @@ $screen: ("tablet": 768px,
           "desktop-sd": 1440px,
           "desktop-hd": 1920px);
 
-
 .icon-list {
     display: flex;
     flex-direction: column;
-}
 
-.icon-list__item {
-    margin-bottom: 30px;
-}
-
-.icon-list__img {
-    display: inline-block;
-    padding: 14px;
-    border-radius: 24px;
-    background-color: #FFFFFF;
-    margin-bottom: 30px;
-}
-
-.icon-list__header {
-    @include font (700, 22px, 27px, $headerColor);
-    margin-top: 0;
-    margin-bottom: 15px;
-    width: 100%;
-}
-
-.icon-list__text {
-    @include font (400, 16px, 26px, #FFFFFF);
-    margin-top: 0;
-    margin-bottom: 0;
-    width: 100%;
+    &__item {
+        margin-bottom: 30px;
+    }
+    
+    &__item:last-child {
+        margin-bottom: 0;
+    }
+    
+    &__img {
+        display: inline-block;
+        padding: 14px;
+        border-radius: 24px;
+        background-color: #FFFFFF;
+        margin-bottom: 30px;
+    }
+    
+    &__header {
+        @include font (700, 22px, 27px, $headerColor);
+        margin-top: 0;
+        margin-bottom: 15px;
+        width: 100%;
+    }
+    
+    &__text {
+        @include font (400, 16px, 26px, #FFFFFF);
+        margin-top: 0;
+        margin-bottom: 0;
+        width: 100%;
+    }
 }
 
 @media (min-width: map.get($screen, tablet)) {
-    .icon-list__text,
-    .icon-list__header {
-        width: 294px;
-    }
-
     .icon-list {
         flex-direction: row;
         flex-wrap: wrap;
         gap: 60px;
-    }
 
-    .icon-list__item {
-        margin-bottom: 0;
+        &__item {
+            width: calc(50% - 30px);
+            margin-bottom: 0;
+        }
     }
 }
 
 @media (min-width: map.get($screen, laptop)) {
-    .icon-list__text,
-    .icon-list__header {
-        width: 261px;
+    .icon-list__item {
+        width: calc(33.33% - 40px);
     }
 }
 
-@media (min-width: map.get($screen, desktop-sd)) {
-    .icon-list__text,
-    .icon-list__header {
-        width: 400px;
-    }
-}
-
-@media (min-width: map.get($screen, desktop-hd)) {
-    .icon-list__text,
-    .icon-list__header {
-        width: 493px;
-    }
-}

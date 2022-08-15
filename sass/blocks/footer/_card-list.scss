@@ -3,10 +3,9 @@
 @use "sass:map";
 
 $screen: ("tablet": 768px,
-        "laptop": 1024px,
-        "desktop-sd": 1440px,
-        "desktop-hd": 1920px);
-
+          "laptop": 1024px,
+          "desktop-sd": 1440px,
+          "desktop-hd": 1920px);
 
 .card-list {
     display: flex;
@@ -20,7 +19,6 @@ $screen: ("tablet": 768px,
     }
 
     &__image {
-        
         &--publication-first {
             @include bg-img ("../images/publication-1.png");
             height: 200px;
@@ -58,7 +56,6 @@ $screen: ("tablet": 768px,
 
 @media (min-width: map.get($screen, laptop))  {
     .card-list {
-
         &__item {
             flex-grow: 1;
             min-width: 281px;

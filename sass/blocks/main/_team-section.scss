@@ -9,8 +9,7 @@ $screen: ("tablet": 768px,
 
 .team-section {
     padding-top: 50px;
-    padding-bottom: 60px;
-    background-color: #FFFFFF;
+    padding-bottom: 30px;
 
     &__card {
         display: flex;
@@ -50,6 +49,12 @@ $screen: ("tablet": 768px,
     &__position {
         @include font (400, 14px, 22px, #B3B3BA);
         margin-bottom:0;
+    }
+}
+
+@media (min-width: map.get($screen, tablet)) {
+    .team-section {
+        padding-top: 80px;
     }
 }
 

@@ -3,14 +3,13 @@
 @use "sass:map";
 
 $screen: ("tablet": 768px,
-        "laptop": 1024px,
-        "desktop-sd": 1440px,
-        "desktop-hd": 1920px);
+          "laptop": 1024px,
+          "desktop-sd": 1440px,
+          "desktop-hd": 1920px);
 
 .publications-section {
     padding-top: 30px;
     padding-bottom: 30px;
-    background-color: #F5F5FA;
 
     &__category {
         margin-bottom: 5px;

@@ -1,0 +1,13 @@
+.body {
+    &__header {
+        background: linear-gradient(to bottom left, #323264, 60%, #643E72);
+    }
+
+    &__main {
+        background-color: #FFFFFF;
+    }
+
+    &__footer {
+        background-color: #F5F5FA;
+    }
+}

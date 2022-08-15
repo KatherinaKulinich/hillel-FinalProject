@@ -359,15 +359,26 @@ h4 {
     margin-right: auto;
   }
 }
+.body__header {
+  background: linear-gradient(to bottom left, #323264, 60%, #643E72);
+}
+.body__main {
+  background-color: #FFFFFF;
+}
+.body__footer {
+  background-color: #F5F5FA;
+}
+
 .icon-list {
   display: flex;
   flex-direction: column;
 }
-
 .icon-list__item {
   margin-bottom: 30px;
 }
-
+.icon-list__item:last-child {
+  margin-bottom: 0;
+}
 .icon-list__img {
   display: inline-block;
   padding: 14px;
@@ -375,7 +386,6 @@ h4 {
   background-color: #FFFFFF;
   margin-bottom: 30px;
 }
-
 .icon-list__header {
   font-weight: 700;
   font-size: 22px;
@@ -385,7 +395,6 @@ h4 {
   margin-bottom: 15px;
   width: 100%;
 }
-
 .icon-list__text {
   font-weight: 400;
   font-size: 16px;
@@ -397,47 +406,29 @@ h4 {
 }
 
 @media (min-width: 768px) {
-  .icon-list__text,
-.icon-list__header {
-    width: 294px;
-  }
   .icon-list {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 60px;
   }
   .icon-list__item {
+    width: calc(50% - 30px);
     margin-bottom: 0;
   }
 }
 @media (min-width: 1024px) {
-  .icon-list__text,
-.icon-list__header {
-    width: 261px;
-  }
-}
-@media (min-width: 1440px) {
-  .icon-list__text,
-.icon-list__header {
-    width: 400px;
-  }
-}
-@media (min-width: 1920px) {
-  .icon-list__text,
-.icon-list__header {
-    width: 493px;
+  .icon-list__item {
+    width: calc(33.33% - 40px);
   }
 }
 .icons-section {
   padding-top: 30px;
   padding-bottom: 60px;
-  background: linear-gradient(to bottom left, #323264, 60%, #643E72);
   border-bottom-left-radius: 12px;
   border-bottom-right-radius: 12px;
   position: relative;
 }
-
-.icons-section:before {
+.icons-section::before {
   content: "";
   background-color: #CACADB;
   height: 10px;
@@ -448,7 +439,6 @@ h4 {
   left: 20px;
   right: 20px;
 }
-
 .icons-section::after {
   content: "";
   background-color: #E7E7F2;
@@ -460,40 +450,10 @@ h4 {
   left: 40px;
   right: 40px;
 }
-
 .icons-section__category {
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 17px;
-  color: #24A3FF;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  text-decoration: none;
-  display: inline-block;
   margin-bottom: 10px;
 }
-
-.icons-section__category:hover {
-  color: #F0145A;
-}
-
-.icons-section__category::after {
-  content: url("../images/arrow.png");
-}
-
-.icons-section__category:hover::after {
-  content: url("../images/arrow-hover.png");
-}
-
 .icons-section__header {
-  font-weight: 700;
-  font-size: 30px;
-  line-height: 36px;
-  color: 0;
-  background: linear-gradient(to right, #F0145A, 20%, #EF8080);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin-top: 0;
   margin-bottom: 60px;
 }
 
@@ -504,8 +464,7 @@ h4 {
 }
 .team-section {
   padding-top: 50px;
-  padding-bottom: 60px;
-  background-color: #FFFFFF;
+  padding-bottom: 30px;
 }
 .team-section__card {
   display: flex;
@@ -550,6 +509,11 @@ h4 {
   margin-bottom: 0;
 }
 
+@media (min-width: 768px) {
+  .team-section {
+    padding-top: 80px;
+  }
+}
 @media (min-width: 1024px) {
   .team-section__card {
     flex-direction: row;
@@ -593,10 +557,9 @@ h4 {
 }
 
 .clients-section {
-  background-color: #FFFFFF;
   text-align: center;
+  padding-top: 30px;
 }
-
 .clients-section__header {
   font-weight: 700;
   font-size: 14px;
@@ -609,11 +572,15 @@ h4 {
   margin-bottom: 30px;
 }
 
+@media (min-width: 1920px) {
+  .clients-section {
+    padding-bottom: 60px;
+  }
+}
 .client-list {
   display: flex;
   flex-direction: column;
 }
-
 .client-list__item {
   width: 100%;
   height: 120px;
@@ -621,51 +588,39 @@ h4 {
   justify-content: center;
   align-items: center;
 }
-
 .client-list__item--hillel {
   background-color: #1C4280;
 }
-
 .client-list__item--wannabiz {
   background-color: #143646;
 }
-
 .client-list__item--tapgerine {
   background-color: #F48B30;
 }
-
 .client-list__item--3d-look {
   background-color: #9E4DC3;
 }
-
 .client-list__item--orangear {
   background-color: #FD9339;
 }
-
 .client-list__item--adtelligent {
   background-color: #E2E2E4;
 }
-
 .client-list__item--clickky {
   background-color: #C71C36;
 }
-
 .client-list__item--eco-leasing {
   background-color: #DCF3F9;
 }
-
 .client-list__item--infra-tek {
   background-color: #EAEAEA;
 }
-
 .client-list__item--city-park {
   background-color: #282240;
 }
-
 .client-list__item--art-print {
   background-color: #1D4568;
 }
-
 .client-list__item--ultimate {
   background-color: #000000;
 }
@@ -698,7 +653,6 @@ h4 {
 .publications-section {
   padding-top: 30px;
   padding-bottom: 30px;
-  background-color: #F5F5FA;
 }
 .publications-section__category {
   margin-bottom: 5px;

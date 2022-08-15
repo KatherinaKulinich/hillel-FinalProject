@@ -15,7 +15,7 @@ $screen: ("tablet": 768px,
     display: inline-block;
 
     &:hover {
-        color: #F0145A; 
+        color: $hoverColor; 
     }
 
     &::after {
