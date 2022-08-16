@@ -1,0 +1,24 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.main-button {
+    background-color: $headerColor;
+    @include font (700, 16px, 19px, #FFFFFF);
+    box-shadow: 0px 0px 20px rgba(36, 163, 255, 0.5);
+    border-radius: 12px;
+    border: none;
+
+
+    &:hover {
+        background-color: #0085FF;
+    }
+
+    &:active {
+        background-color: #006CCF;
+    }
+
+    &--filled {
+        width: 100%;
+        padding: 18px 96px;
+    }
+}

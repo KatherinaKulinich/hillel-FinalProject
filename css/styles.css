@@ -467,25 +467,6 @@ h4 {
   outline-color: #F0145A;
 }
 
-.main-button {
-  width: 100%;
-  background-color: #24A3FF;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 19px;
-  color: #FFFFFF;
-  padding: 18px 96px;
-  box-shadow: 0px 0px 20px rgba(36, 163, 255, 0.5);
-  border-radius: 12px;
-  border: none;
-}
-.main-button:hover {
-  background-color: #0085FF;
-}
-.main-button:active {
-  background-color: #006CCF;
-}
-
 @media (min-width: 768px) {
   .popup__form {
     width: 650px;
@@ -498,6 +479,27 @@ h4 {
     color: 0;
   }
 }
+.main-button {
+  background-color: #24A3FF;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  color: #FFFFFF;
+  box-shadow: 0px 0px 20px rgba(36, 163, 255, 0.5);
+  border-radius: 12px;
+  border: none;
+}
+.main-button:hover {
+  background-color: #0085FF;
+}
+.main-button:active {
+  background-color: #006CCF;
+}
+.main-button--filled {
+  width: 100%;
+  padding: 18px 96px;
+}
+
 .starting-screen {
   background-position: center;
   background-size: cover;

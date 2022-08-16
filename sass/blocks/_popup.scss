@@ -94,32 +94,6 @@ $screen: ("tablet": 768px,
     }
 }
 
-.main-button {
-    width: 100%;
-    background-color: $headerColor;
-    @include font (700, 16px, 19px, #FFFFFF);
-    padding: 18px 96px;
-    box-shadow: 0px 0px 20px rgba(36, 163, 255, 0.5);
-    border-radius: 12px;
-    border: none;
-
-
-    &:hover {
-        background-color: #0085FF;
-    }
-
-    &:active {
-        background-color: #006CCF;
-    }
-
-}
-
-
-
-
-
-
-
 
 @media (min-width: map.get($screen, tablet))  {
     .popup {
@@ -132,15 +106,4 @@ $screen: ("tablet": 768px,
             @include font (700, 38px, 46px, 0);
         }
     }
-}
-
-@media (min-width: map.get($screen, laptop)) {
-
-}
-@media (min-width: map.get($screen, desktop-sd))  {
-
-}
-
-@media (min-width: map.get($screen, desktop-hd)) {
-
 }
