@@ -22,28 +22,26 @@ h4 {
 }
 
 .wrapper,
-.wrapper-benefits {
+.wrapper-benefits-description {
     margin-left: 30px;
     margin-right: 30px;
 }
 
-
-
 @media (min-width: map.get($screen, tablet))  {
     .wrapper,
-    .wrapper-benefits {
+    .wrapper-benefits-description {
         margin-left: 60px;
         margin-right: 60px;
     }
 }
 
 @media (min-width: map.get($screen, laptop)) {
-    .wrapper-scroll {
+    .wrapper-benefits {
         margin-right: 60px;
         margin-left: 60px;
     }
 
-    .wrapper-benefits {
+    .wrapper-benefits-description {
         margin-left: 0;
         margin-right: 0;
     }

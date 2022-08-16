@@ -1,0 +1,134 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+@use "sass:map";
+
+
+$screen: ("tablet": 768px,
+          "laptop": 1024px,
+          "desktop-sd": 1440px,
+          "desktop-hd": 1920px);
+
+.popup {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(50, 50, 100, 0.7);
+
+    &__form {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 30px;
+        width: 100%;
+        max-width: 650px;
+        background-color: #F5F5FA;
+    }
+
+    &__fieldset {
+        border:  none;
+        margin: 0;
+        padding: 0 0 30px 0;
+    }
+
+    &__main-header {
+        @include gradient-text ();
+        @include font (700, 30px, 37px, 0);
+        margin-bottom: 30px;
+    }
+
+    &__secondary-header {
+        @include font (700, 14px, 17px, #B3B3BA);
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+    }
+
+    &__inputs {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    &__cross {
+        width: 32px;
+        height: 32px;
+        border: none;
+        background-color: rgba(245, 245, 250, 0.1);
+        background-image: url("../images/svg/close.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+    }
+
+    &__cross:hover {
+        background-color: #E6E6F0;
+        border-radius: 8px;
+    }
+
+    &__input {
+        border: none;
+        color: #000000;
+        padding: 15px;
+        border-radius: 8px;
+    }
+
+    &__input::placeholder {
+        @include font (400, 16px, 26px, #B3B3BA);
+    }
+
+    &__input:focus {
+        outline: 1px solid $headerColor;
+        border-radius: 8px;
+        
+    }
+
+    &__input:invalid {
+        color: $hoverColor;
+        outline-color: $hoverColor;
+    }
+}
+
+.main-button {
+    width: 100%;
+    background-color: $headerColor;
+    @include font (700, 16px, 19px, #FFFFFF);
+    padding: 18px 96px;
+    box-shadow: 0px 0px 20px rgba(36, 163, 255, 0.5);
+    border-radius: 12px;
+    border: none;
+
+}
+
+
+
+
+
+
+@media (min-width: map.get($screen, tablet))  {
+    .popup {
+        &__form {
+            width: 650px;
+            border-radius: 12px;
+        }
+
+        &__main-header {
+            @include font (700, 38px, 46px, 0);
+        }
+    }
+}
+
+@media (min-width: map.get($screen, laptop)) {
+
+}
+@media (min-width: map.get($screen, desktop-sd))  {
+
+}
+
+@media (min-width: map.get($screen, desktop-hd)) {
+
+}

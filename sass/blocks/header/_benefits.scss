@@ -15,15 +15,14 @@ $screen: ("tablet": 768px,
         display: flex;
         gap: 30px;
         overflow-x: auto;
-        padding-top: 30px;
-        padding-bottom: 30px;
+        padding: 30px;
     }
 
     &__header {
         @include gradient-text ();
         @include font (700, 30px, 37px, 0);
         margin-bottom: 0;
-        margin-left: 30px;
+       
     }
 
     &__item {
@@ -56,12 +55,10 @@ $screen: ("tablet": 768px,
 @media (min-width: map.get($screen, tablet))  {  
     .benefits {
         &__names {
-            padding-top: 60px;
-            padding-bottom: 60px;
+            padding: 60px;
         }
 
         &__header {
-            margin-left: 60px;
             font-size: 38px;
             line-height: 46px;
         }

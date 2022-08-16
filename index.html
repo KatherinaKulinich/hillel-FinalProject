@@ -22,7 +22,7 @@
             </div>
         </section>
         <section>
-            <div class="wrapper-scroll">
+            <div class="wrapper-benefits">
                 <div class="benefits">
                     <div class="benefits__names">
                         <h2 class="benefits__header">
@@ -39,7 +39,7 @@
                         </a>
                     </div>
                     <div class="benefits__border"></div>
-                    <div class="wrapper-benefits">
+                    <div class="wrapper-benefits-description">
                         <div class="benefits__description">
                             <h4 class="benefits__topic"> 
                                 We turn the idea of legal services
@@ -279,6 +279,60 @@
                 </div>
             </div>
         </section>
+        <div class="popup">
+            <form 
+                action="" 
+                method="post" 
+                name="popup"
+                class="popup__form"
+            >
+                <fieldset class="popup__fieldset">
+                    <legend class="popup__main-header">
+                        We would like to help you
+                    </legend>
+                    <div class="popup__inputs">
+                        <input 
+                            type="text" 
+                            name="user-name" 
+                            placeholder="Name" 
+                            class="popup__input"
+                        >
+                        <textarea 
+                            placeholder="Message"
+                            name="user-issue" 
+                            cols="30" 
+                            rows="7" 
+                            class="popup__input"
+                        ></textarea>
+                    </div>
+                </fieldset>
+                <fieldset class="popup__fieldset">
+                    <legend class="popup__secondary-header">
+                        How to answer you?
+                    </legend>
+                    <div class="popup__inputs">
+                        <input 
+                            type="tel" 
+                            name="user-tel" 
+                            placeholder="Phone number" 
+                            minlength="10"
+                            maxlength="13"
+                            class="popup__input"
+                        >
+                        <input 
+                            type="email" 
+                            name="user-email" 
+                            placeholder="Email" 
+                            class="popup__input"
+                        >
+                    </div>
+                </fieldset>
+                <button type="submit" class="popup__button main-button">
+                    Send message
+                </button>
+                <button class="popup__cross" type="button"></button>
+            </form>
+        </div>
     </main>
     <footer class="body__footer">
         <section class="publications-section" id="publications">
