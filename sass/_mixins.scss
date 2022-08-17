@@ -1,4 +1,6 @@
-@mixin font ($fw, $fs, $lh, $col: #24A3FF) {
+@use "./variables" as *;
+
+@mixin font ($fw, $fs, $lh, $col: $headerColor) {
     font-weight: $fw;
     font-size: $fs;
     line-height: $lh;
