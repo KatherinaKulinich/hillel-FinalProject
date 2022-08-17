@@ -27,7 +27,7 @@ $screen: ("tablet": 768px,
     }
 
     &__header {
-        @include font (700, 30px, 36px, 0);
+        @include font (700, 30px, 36px);
         @include gradient-text ();
     }
 }

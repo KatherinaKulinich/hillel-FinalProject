@@ -1,4 +1,4 @@
-@mixin font ($fw, $fs, $lh, $col) {
+@mixin font ($fw, $fs, $lh, $col: #24A3FF) {
     font-weight: $fw;
     font-size: $fs;
     line-height: $lh;

@@ -29,8 +29,8 @@ $screen: ("tablet": 768px,
     }
 
     &__main-header {
+        @include font (700, 30px, 37px);
         @include gradient-text ();
-        @include font (700, 30px, 37px, 0);
         margin-bottom: 30px;
     }
 
@@ -75,7 +75,7 @@ $screen: ("tablet": 768px,
         }
 
         &__main-header {
-            @include font (700, 38px, 46px, 0);
+            @include font (700, 38px, 46px);
         }
     }
 }
