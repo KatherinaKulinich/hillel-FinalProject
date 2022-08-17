@@ -74,6 +74,12 @@ $screen: ("tablet": 768px,
     }
 }
 
+@media (width:map.get($screen, tablet)) {
+    .client-list__item:nth-child(n+7) {
+        display: flex;
+    }
+}
+
 @media (min-width: map.get($screen, tablet)) {
     .client-list {
         flex-direction: row;

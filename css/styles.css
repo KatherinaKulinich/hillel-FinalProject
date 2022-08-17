@@ -715,7 +715,7 @@ h4 {
   }
 }
 .icons-section {
-  padding-top: 15px;
+  padding-top: 30px;
   padding-bottom: 60px;
   border-bottom-left-radius: 12px;
   border-bottom-right-radius: 12px;
@@ -747,15 +747,15 @@ h4 {
   margin-bottom: 10px;
 }
 .icons-section__header {
-  margin-bottom: 60px;
+  margin-bottom: 30px;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 768px) {
   .icons-section {
-    padding-top: 30px;
+    padding-top: 15px;
   }
   .icons-section__header {
-    margin-bottom: 30px;
+    margin-bottom: 60px;
   }
 }
 .team-section {
@@ -924,6 +924,11 @@ h4 {
 @media (max-width: 768px) {
   .client-list__item:nth-child(n+7) {
     display: none;
+  }
+}
+@media (width: 768px) {
+  .client-list__item:nth-child(n+7) {
+    display: flex;
   }
 }
 @media (min-width: 768px) {
