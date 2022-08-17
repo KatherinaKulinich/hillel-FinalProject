@@ -31,9 +31,8 @@ $screen: ("tablet": 768px,
     }
 
     &__button {
-        background-image: url("../images/button.png");
-        background-position: center;
-        background-repeat: no-repeat;
+        @include bg-img ("../images/button.png");
+        background-size: auto;
         height: 42px;
         width: 42px;
         border: 2px solid rgba(255, 255, 255, 0.5);
@@ -55,13 +54,3 @@ $screen: ("tablet": 768px,
     }
 }
 
-@media (min-width: map.get($screen, laptop)) {
-    
-}
-@media (min-width: map.get($screen, desktop-sd))  {
-
-}
-
-@media (min-width: map.get($screen, desktop-hd)) {
-
-}

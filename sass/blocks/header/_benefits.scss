@@ -22,7 +22,6 @@ $screen: ("tablet": 768px,
         @include gradient-text ();
         @include font (700, 30px, 37px, 0);
         margin-bottom: 0;
-       
     }
 
     &__item {
@@ -122,6 +121,3 @@ $screen: ("tablet": 768px,
     }
 }
 
-@media (min-width: map.get($screen, desktop-hd)) {
-    
-}

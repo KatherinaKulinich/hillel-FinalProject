@@ -1,0 +1,24 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.form-input {
+    border: none;
+    color: #000000;
+    padding: 15px;
+    border-radius: 8px;
+    resize: none;
+
+    &::placeholder {
+        @include font (400, 16px, 26px, #B3B3BA);
+    }
+    
+    &:focus {
+        outline: 1px solid $headerColor;
+        border-radius: 8px;
+    }
+    
+    &:invalid {
+        color: $hoverColor;
+        outline-color: $hoverColor;
+    }
+}

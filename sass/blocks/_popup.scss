@@ -9,14 +9,9 @@ $screen: ("tablet": 768px,
           "desktop-hd": 1920px);
 
 .popup {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-color: rgba(50, 50, 100, 0.7);
+    display: none;
 
-    &__form {
+    &__form-box {
         position: absolute;
         top: 50%;
         left: 50%;
@@ -69,35 +64,12 @@ $screen: ("tablet": 768px,
         background-color: #E6E6F0;
         border-radius: 8px;
     }
-
-    &__input {
-        border: none;
-        color: #000000;
-        padding: 15px;
-        border-radius: 8px;
-        resize: none;
-    }
-
-    &__input::placeholder {
-        @include font (400, 16px, 26px, #B3B3BA);
-    }
-
-    &__input:focus {
-        outline: 1px solid $headerColor;
-        border-radius: 8px;
-        
-    }
-
-    &__input:invalid {
-        color: $hoverColor;
-        outline-color: $hoverColor;
-    }
 }
 
 
 @media (min-width: map.get($screen, tablet))  {
     .popup {
-        &__form {
+        &__form-box {
             width: 650px;
             border-radius: 12px;
         }

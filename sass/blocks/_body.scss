@@ -10,4 +10,13 @@
     &__footer {
         background-color: #F5F5FA;
     }
+
+    &__popup {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: rgba(50, 50, 100, 0.7);
+    }
 }
