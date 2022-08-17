@@ -884,6 +884,9 @@ h4 {
   justify-content: center;
   align-items: center;
 }
+.client-list__item:nth-child(n+7) {
+  display: none;
+}
 .client-list__item--hillel {
   background-color: #1C4280;
 }
@@ -921,16 +924,6 @@ h4 {
   background-color: #000000;
 }
 
-@media (max-width: 768px) {
-  .client-list__item:nth-child(n+7) {
-    display: none;
-  }
-}
-@media (width: 768px) {
-  .client-list__item:nth-child(n+7) {
-    display: flex;
-  }
-}
 @media (min-width: 768px) {
   .client-list {
     flex-direction: row;
@@ -938,6 +931,9 @@ h4 {
   }
   .client-list__item {
     width: 33.33%;
+  }
+  .client-list__item:nth-child(n+7) {
+    display: flex;
   }
 }
 @media (min-width: 1024px) {
