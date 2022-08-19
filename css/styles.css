@@ -372,7 +372,7 @@ h4 {
     margin-right: auto;
   }
 }
-.body__header {
+.body__gradient-section {
   background: linear-gradient(to bottom left, #323264, 60%, #643E72);
 }
 .body__main {
