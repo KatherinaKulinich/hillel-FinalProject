@@ -16,3 +16,49 @@
     font-display: swap;
 }
 
+@font-face {
+    font-family: 'icomoon';
+    src: url(../fonts/icomoon.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+  
+  [class^="img-"], [class*=" img-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon !important';
+    
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .img-arrow-category:before {
+    content: "\e900";
+  }
+  .img-arrow-down:before {
+    content: "\e901";
+  }
+  .img-Close:before {
+    content: "\e902";
+  }
+  .img-Dot-separator:before {
+    content: "\e903";
+  }
+  .img-fb:before {
+    content: "\e904";
+  }
+  .img-Hamburger:before {
+    content: "\e905";
+  }
+  .img-Slash:before {
+    content: "\e906";
+  }
+  
+

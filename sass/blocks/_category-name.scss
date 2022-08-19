@@ -18,12 +18,15 @@ $screen: ("tablet": 768px,
         color: $hoverColor; 
     }
 
-    &::after {
-        content: url('../images/arrow.png');
-    }
+    &__arrow {
+        font-family: 'icomoon';
+        font-size: 12px;
+        line-height: 12px;
+        color: $headerColor;
 
-    &:hover::after {
-        content: url('../images/arrow-hover.png');
+        &:hover {
+            color: $hoverColor;
+        }
     }
 
     &__header {

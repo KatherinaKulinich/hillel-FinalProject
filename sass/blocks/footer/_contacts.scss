@@ -1,0 +1,118 @@
+@use "../../variables" as *;
+@use "../../mixins" as *;
+@use "sass:map";
+
+
+$screen: ("tablet": 768px,
+          "laptop": 1024px,
+          "desktop-sd": 1440px,
+          "desktop-hd": 1920px);
+
+.contacts {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-top: 2px solid #E6E6F0;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    &__align {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__map {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__adress {
+        @include font (400, 16px, 19px, #323264);
+        font-style: normal;
+        margin-bottom: 10px;
+    }
+
+    &__map-link {
+        @include font (700, 12px, 15px);
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        text-decoration: none;
+        margin-bottom: 21px;
+    }
+
+    &__social {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    &__facebook {
+        font-family: 'icomoon';
+        text-decoration: none;
+        font-size: 38px;
+        color: $headerColor;
+
+        &:hover {
+            color: $hoverColor;
+        }
+    }
+
+    &__tel {
+        @include font (700, 16px, 19px, #46466E);
+        text-decoration: none;
+    }
+
+    &__mail {
+        @include font (700, 16px, 19px);
+        text-decoration: none;
+        margin-bottom: 30px;
+
+        &:hover {
+            color: $hoverColor;
+        }
+    }
+
+    &__info {
+        @include font (400, 16px, 19px, #B3B3BA);
+        margin-bottom: 0;
+    }
+}
+
+
+
+@media (min-width: map.get($screen, tablet))  {
+    .contacts {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: baseline;
+
+        &__social {
+            flex-direction: row;
+            align-items: center;
+        }
+
+        &__map {
+            flex-direction: row;
+            align-items: baseline;
+            margin-bottom: 20px;
+        }
+
+        &__mail {
+            margin-bottom: 0;
+        }
+
+        &__map-link {
+            margin-bottom: 0;
+        }
+
+        &__adress {
+            margin-bottom: 0;
+        }
+
+       
+    }
+
+
+}
+        
+        

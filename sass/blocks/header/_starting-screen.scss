@@ -31,18 +31,19 @@ $screen: ("tablet": 768px,
     }
 
     &__button {
-        @include bg-img ("../images/button.png");
-        background-size: auto;
-        height: 42px;
-        width: 42px;
+        font-family: 'icomoon';
+        font-size: 20px;
+        line-height: 20px;
+        color: #FFFFFF;
         border: 2px solid rgba(255, 255, 255, 0.5);
         border-radius: 50%;
         position: absolute;
         bottom: 30px;
+        
     }
 
     &__button:hover {
-        background-image: url("../images/button-hover.png");
+       
         border-color: $hoverColor;
         opacity: 50%;
     }
