@@ -31,21 +31,25 @@ $screen: ("tablet": 768px,
     }
 
     &__button {
-        font-family: 'icomoon';
-        font-size: 20px;
-        line-height: 20px;
         color: #FFFFFF;
         border: 2px solid rgba(255, 255, 255, 0.5);
         border-radius: 50%;
         position: absolute;
         bottom: 30px;
-        
-    }
+        width: 42px;
+        height: 42px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
-    &__button:hover {
-       
-        border-color: $hoverColor;
-        opacity: 50%;
+        &:hover {
+            border-color: $hoverColor;
+            opacity: 50%;
+        }
+
+        &:hover .starting-screen__icon path {
+            stroke: $hoverColor
+        }
     }
 }
 

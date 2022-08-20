@@ -1,0 +1,25 @@
+@use "sass:map";
+
+$screen: ("tablet": 768px,
+          "laptop": 1024px,
+          "desktop-sd": 1440px,
+          "desktop-hd": 1920px);
+
+
+@media (min-width: map.get($screen, tablet)) {
+    .dot {
+        &--gray::before {
+            content: url("../images/svg/dot.svg");
+            position: absolute;
+            left: -15px;
+            top: -2px;
+        }
+        
+        &--white:before {
+            content: url("../images/svg/dot-header.svg");
+            position: absolute;
+            left: -15px;
+            top: -2px;
+        }
+    }
+}

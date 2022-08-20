@@ -12,21 +12,16 @@ $screen: ("tablet": 768px,
     letter-spacing: 1px;
     text-transform: uppercase;
     text-decoration: none;
-    display: inline-block;
-
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    
     &:hover {
         color: $hoverColor; 
     }
 
-    &__arrow {
-        font-family: 'icomoon';
-        font-size: 12px;
-        line-height: 12px;
-        color: $headerColor;
-
-        &:hover {
-            color: $hoverColor;
-        }
+    &:hover .category-name__arrow path {
+        stroke: $hoverColor; 
     }
 
     &__header {
