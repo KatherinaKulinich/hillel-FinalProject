@@ -1,0 +1,65 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.contacts {
+
+    &__adress {
+        @include font (400, 16px, 19px);
+        font-style: normal;
+        position: relative;
+
+        &--dark {
+            color: #323264;
+        }
+
+        &--light {
+            color: #B3B3BA;
+        }
+    }
+
+    &__map-link {
+        @include font (700, 12px, 15px);
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        text-decoration: none;
+        position: relative;
+
+        &:hover {
+            color: $hoverColor;
+        }
+    }
+
+    &__facebook {
+        position: relative;
+
+        &:hover .contacts__facebook-icon path {
+            fill: $hoverColor
+        }
+    }
+
+
+
+    &__tel {
+        @include font (700, 16px, 19px);
+        text-decoration: none;
+        position: relative;
+
+        &--dark {
+            color: #46466E;
+        }
+
+        &--light {
+            color: #FFFFFF;
+        }
+    }
+
+    &__mail {
+        @include font (700, 16px, 19px);
+        text-decoration: none;
+        position: relative;
+
+        &:hover {
+            color: $hoverColor;
+        }
+    }
+}

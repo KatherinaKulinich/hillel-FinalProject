@@ -1,0 +1,114 @@
+@use "../../variables" as *;
+@use "../../mixins" as *;
+@use "sass:map";
+
+$screen: ("tablet": 768px,
+          "laptop": 1024px,
+          "desktop-sd": 1440px,
+          "desktop-hd": 1920px);
+
+.header {
+
+    &__blackout {
+        background-color: rgba(245, 245, 250, 0.2);
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__adress,
+    &__facebook {
+        display: none;
+    }
+
+    &__logo-section {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+
+    &__logo-icon {
+        width: 70px;
+        height: 32px;
+    }
+
+    &__button {
+        background-color: transparent;
+        border: none;
+        padding: 0;
+    }
+}
+
+.navigation {
+    display: none;
+    &__menu {
+        display: flex;
+        gap: 15px;
+    }
+
+    &__item {
+        @include font (700, 16px, 20px, #FFFFFF);
+        text-decoration: none;
+
+        &--active {
+            color: $hoverColor;
+            padding-bottom: 3px;
+            border-bottom: 2px solid $hoverColor;
+        }
+    }
+}
+
+
+@media (min-width: map.get($screen, tablet)) {
+    .header {
+        &__blackout {
+            padding-top: 50px;
+            padding-bottom: 15px;
+            background-color: transparent;
+        }
+
+        &__adress,
+        &__facebook {
+        display: block;
+        }
+
+        &__top {
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            gap: 25px;
+        }
+
+        &__contacts {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+        }
+
+        &__button {
+            display: none;
+        }
+
+        &__logo-icon {
+            width: 130px;
+            height: 60px;
+        }
+    }
+}
+
+@media (min-width: map.get($screen, laptop))  {
+
+}
+
+@media (min-width: map.get($screen, desktop-sd)) {
+
+}
+
+@media (min-width: map.get($screen, desktop-hd)) {
+
+}
