@@ -18,8 +18,9 @@ $screen: ("tablet": 768px,
         &--white:before {
             content: url("../images/svg/dot-header.svg");
             position: absolute;
-            left: -13px;
-            top: -2px;
+            left: -12px;
+            top: 50%;
+            transform: translateY(-50%);
         }
     }
 }

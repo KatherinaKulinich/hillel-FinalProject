@@ -4,7 +4,7 @@
 .contacts {
 
     &__adress {
-        @include font (400, 16px, 19px);
+        @include font (400, 16px, 20px);
         font-style: normal;
         position: relative;
 
@@ -31,16 +31,23 @@
 
     &__facebook {
         position: relative;
-
+        
         &:hover .contacts__facebook-icon path {
             fill: $hoverColor
         }
     }
 
-
+    &__facebook-icon {
+        
+        &--light {
+            width: 24px;
+            height: 24px;
+            vertical-align: middle
+        } 
+    }
 
     &__tel {
-        @include font (700, 16px, 19px);
+        @include font (700, 16px, 20px);
         text-decoration: none;
         position: relative;
 
@@ -54,7 +61,7 @@
     }
 
     &__mail {
-        @include font (700, 16px, 19px);
+        @include font (700, 16px, 20px);
         text-decoration: none;
         position: relative;
 

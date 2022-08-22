@@ -1,0 +1,52 @@
+@use "../../variables" as *;
+@use "../../mixins" as *;
+@use "sass:map";
+
+
+$screen: ("tablet": 768px,
+          "laptop": 1024px,
+          "desktop-sd": 1440px,
+          "desktop-hd": 1920px);
+
+
+.navigation {
+    display: none;
+}
+
+@media (min-width: map.get($screen, tablet)) {
+    .navigation {
+        display: flex;
+        padding-top: 15px;
+        padding-bottom: 15px;
+
+        &__menu {
+            display: flex;
+            gap: 15px;
+        }
+    
+        &__item {
+            @include font (700, 16px, 20px, #FFFFFF);
+            text-decoration: none;
+    
+            &--active {
+                color: $hoverColor;
+                padding-bottom: 3px;
+                border-bottom: 2px solid $hoverColor;
+            }
+        }
+    }
+}
+
+@media (min-width: map.get($screen, laptop))  {
+    .navigation {
+        padding: 0;
+    }
+}
+
+@media (min-width: map.get($screen, desktop-sd)) {
+
+}
+
+@media (min-width: map.get($screen, desktop-hd)) {
+
+}

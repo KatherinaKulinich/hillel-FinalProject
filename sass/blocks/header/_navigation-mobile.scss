@@ -1,0 +1,67 @@
+@use "../../variables" as *;
+@use "../../mixins" as *;
+@use "sass:map";
+
+
+$screen: ("tablet": 768px,
+          "laptop": 1024px,
+          "desktop-sd": 1440px,
+          "desktop-hd": 1920px);
+
+
+.navigation-mobile {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(50, 50, 100, 0.7); 
+
+    &__form {
+        padding: 64px 12px 12px 12px;
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+        background-color: #FFFFFF;
+        position: absolute;
+        bottom: 0;
+        right: 8px;
+        left: 8px;
+    }
+
+    &__menu {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    &__item {
+        width: 100%;
+        padding: 7px 110px;
+        border-radius: 12px;
+        background-color: #F5F5FA;
+        @include font(700, 24px, 29px);
+        text-decoration: none;
+
+        &--active {
+            color: $hoverColor;
+        }
+
+        &:active {
+            background-color: #E6E6F0;
+        }
+    }
+
+    &__cross {
+        position: absolute;
+        top: 19px;
+        right: 19px;
+    }
+}
+
+.form-showed {
+    display: block;
+    }
+    
+
