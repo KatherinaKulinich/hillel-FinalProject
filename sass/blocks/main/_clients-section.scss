@@ -9,7 +9,6 @@ $screen: ("tablet": 768px,
 
 .clients-section {
     text-align: center;
-    padding-top: 30px;
 
     &__header {
         @include font (700, 14px, 17px, #323264);
@@ -22,11 +21,6 @@ $screen: ("tablet": 768px,
 }
 
 
-@media (min-width: map.get($screen, desktop-hd)) {
-    .clients-section {
-        padding-bottom: 60px;
-    }
-}
 
 
 

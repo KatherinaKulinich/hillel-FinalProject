@@ -65,7 +65,7 @@
                                     <a class="navigation__item" href="">
                                         about us
                                     </a>
-                                    <a class="navigation__item" href="">
+                                    <a class="navigation__item" href="./pages/services-page.html">
                                         services
                                     </a>
                                     <a class="navigation__item" href="">
@@ -74,7 +74,7 @@
                                     <a class="navigation__item" href="">
                                         publications
                                     </a>
-                                    <a class="navigation__item" href="">
+                                    <a class="navigation__item" href="#contacts">
                                         contact
                                     </a>
                                 </nav>
@@ -84,7 +84,7 @@
                 </header>
             </div>
             <div class="wrapper">
-                <div class="starting-screen__main">
+                <div>
                     <h1 class="starting-screen__header">
                         you legal solutions provider
                     </h1>
@@ -130,9 +130,9 @@
                 </div>
             </div>     
         </section>
-        <section class="icons-section">
+        <section class="body__icon-section icons-section">
             <div class="wrapper">
-                <a class="icons-section__category category-name" href="">
+                <a class="icons-section__category category-name" href="./pages/services-page.html">
                     Services
                     <svg class="category-name__arrow" width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M3.5 2L8 6.5L3.5 11" stroke="#24A3FF" stroke-width="2"/>
@@ -241,7 +241,7 @@
                 </div>
             </div>
         </section>
-        <section class="clients-section">
+        <section class="body__clients-section clients-section">
             <div class="wrapper-secondary">
                 <div>
                     <a class="clients-section__header" href="">
@@ -412,7 +412,7 @@
         </section>
         <footer>
             <div class="wrapper">
-                <div class="footer">
+                <div class="body__copyright footer" id="contacts">
                     <div class="footer__location contacts">
                         <address class="contacts__adress contacts__adress--dark">
                             Kyiv, Mechnikova str., 14/1
@@ -447,7 +447,7 @@
                 <a class="navigation-mobile__item" href="">
                     about us
                 </a>
-                <a class="navigation-mobile__item" href="">
+                <a class="navigation-mobile__item" href="./pages/services-page.html">
                     services
                 </a>
                 <a class="navigation-mobile__item" href="">
@@ -456,7 +456,7 @@
                 <a class="navigation-mobile__item" href="">
                     publications
                 </a>
-                <a class="navigation-mobile__item" href="">
+                <a class="navigation-mobile__item" href="#contacts" id="contacts-button">
                     contact
                 </a>
             </nav>
@@ -520,12 +520,17 @@
         const navigation = document.querySelector('.navigation-mobile');
         const menuButton = document.querySelector('#open-nav');
         const crossButton = document.querySelector('#close-nav');
+        const menuContacts = document.querySelector('#contacts-button');
     
         menuButton.addEventListener('click', () => {
             navigation.classList.add('form-showed')
         })
     
         crossButton.addEventListener('click', () => {
+            navigation.classList.remove('form-showed')
+        })
+
+        menuContacts.addEventListener('click', () => {
             navigation.classList.remove('form-showed')
         })
     </script>

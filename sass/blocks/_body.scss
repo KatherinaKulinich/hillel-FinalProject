@@ -1,3 +1,10 @@
+@use "sass:map";
+
+$screen: ("tablet": 768px,
+          "laptop": 1024px,
+          "desktop-sd": 1440px,
+          "desktop-hd": 1920px);
+
 .body {
     &__gradient-section {
         background: linear-gradient(to bottom left, #323264, 60%, #643E72);
@@ -7,8 +14,22 @@
         background-color: #FFFFFF;
     }
 
+    &__icon-section {
+        padding-top: 30px;
+        padding-bottom: 60px;
+    }
+
+    &____clients-section {
+        padding-top: 30px;
+    }
+
+
     &__footer {
         background-color: #F5F5FA;
+    }
+
+    &__copyright {
+        border-top: 2px solid #E6E6F0;
     }
 
     &__popup {
@@ -18,5 +39,17 @@
         bottom: 0;
         left: 0;
         background-color: rgba(50, 50, 100, 0.7);
+    }
+}
+
+@media (min-width: map.get($screen, tablet)) {
+    .body {
+        &__icon-section {
+            padding-top: 15px;
+        }
+
+        &__clients-section {
+            padding-bottom: 60px;
+        }
     }
 }
