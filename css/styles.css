@@ -995,6 +995,8 @@ h4 {
   margin-top: 0;
   margin-bottom: 15px;
   width: 100%;
+  display: block;
+  text-decoration: none;
 }
 .icon-list__header:hover {
   color: #F0145A;
