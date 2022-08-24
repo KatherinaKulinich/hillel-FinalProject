@@ -10,9 +10,17 @@ $screen: ("tablet": 768px,
 .header {
     
     &__blackout {
-        background-color: rgba(245, 245, 250, 0.2);
         padding-top: 10px;
         padding-bottom: 10px;
+
+        &--dark {
+            background-color: rgba(245, 245, 250, 0.2);
+        }
+
+        &--light {
+            background-color: rgba(245, 245, 250, 1);
+        }
+        
     }
 
     &__top {

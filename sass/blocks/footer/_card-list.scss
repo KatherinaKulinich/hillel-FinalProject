@@ -33,6 +33,16 @@ $screen: ("tablet": 768px,
             @include bg-img ("../images/publication-3.png");
             height: 200px;
         }
+
+        &--publication-fourth {
+            @include bg-img ("../images/publication-4.png");
+            height: 200px;
+        }
+
+        &--publication-fifth {
+            @include bg-img ("../images/publication-5.png");
+            height: 200px;
+        }
     }
 }
 

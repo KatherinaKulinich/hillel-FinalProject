@@ -15,9 +15,17 @@ $screen: ("tablet": 768px,
 
     &__kind {
         position: relative;
-        @include font (400, 20px, 25px, #FFFFFF);
+        @include font (400, 20px, 25px);
         display: block;
         text-decoration: none;
+
+        &--light {
+            color: #323264;
+        }
+
+        &--dark {
+            color: #FFFFFF;
+        }
     }
 
     &__kind::before {
@@ -43,7 +51,8 @@ $screen: ("tablet": 768px,
         }
 
         &__kind {
-            @include font (400, 36px, 44px, #FFFFFF);
+            font-size: 36px;
+            line-height: 44px;
         }
 
         &__kind::before {

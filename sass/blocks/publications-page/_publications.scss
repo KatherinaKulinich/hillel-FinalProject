@@ -1,0 +1,54 @@
+@use "../../variables" as *;
+@use "../../mixins" as *;
+@use "sass:map";
+
+
+$screen: ("tablet": 768px,
+          "laptop": 1024px,
+          "desktop-sd": 1440px,
+          "desktop-hd": 1920px);
+
+.publications {
+    padding-top: 32px;
+    padding-bottom: 60px;
+
+    &__list {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    &__switch {
+        width: 233px;
+        padding: 2px;
+        background-color: #E6E6F0;
+        border-radius: 12px;
+        display: flex;
+        justify-content: space-between;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    &__button {
+        padding: 8px 30px;
+        background-color: transparent;
+        border-radius: 10px;
+        border: none;
+        @include font (700, 16px, 20px, #323264);
+
+        &--active {
+            background-color: #FFFFFF;
+        }
+    }
+
+    &__main-button {
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+
+
+
+@media (min-width: map.get($screen, tablet)) {
+
+}
