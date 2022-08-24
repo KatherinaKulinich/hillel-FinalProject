@@ -60,6 +60,9 @@ $screen: ("tablet": 768px,
     }
 }
 
+.popup-showed {
+    display: block;
+}
 
 @media (min-width: map.get($screen, tablet))  {
     .popup {

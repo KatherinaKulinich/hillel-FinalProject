@@ -52,9 +52,9 @@
                                 <a href="../index.html">
                                     <img class="category-logo__image-logo" src="../images/logo-light.png" alt="logo">
                                 </a>
-                                <div class="category-logo__kind">
+                                <a href="../pages/services-page.html" class="category-logo__kind">
                                     services
-                                </div>
+                                </a>
                             </div>
                             <button id="open-nav" class="header__button" type="button">
                                 <img src="../images/svg/hamburger.svg" alt="button-menu">
@@ -87,8 +87,61 @@
                 </div>
             </header>
         </div>
-        <main>
-
+        <main class="service-description">
+            <div class="wrapper">
+                <div class="service-description__main">
+                    <div class="icon-image icon-image--ecommerce"></div>
+                    <h1 class="service-description__main-header">
+                        IT and e-commerce
+                    </h1>
+                    <p class="service-description__text">
+                        An endless stream of contracts, tax issues, labor relations, 
+                        corporate papers - legal work distracts you from doing business. 
+                        But there is not much work to do to hire an in-house lawyer.
+                    </p>
+                    <p class="service-description__text">
+                        In addition, over time, the work will become the same type and uninteresting 
+                        for a full-time lawyer. And we know very well how difficult it is to find 
+                        a good candidate with experience in the field of information technology in Ukraine.
+                    </p>
+                    <button id="open-popup" class="service-description__button main-button main-button--short" type="button">
+                        Free consultation
+                    </button>
+                </div>
+                <div class="service-description__benefits">
+                    <h3 class="service-description__secondary-header">
+                        Services in this area:
+                    </h3>
+                    <div class="service-description__list">
+                        <p class="service-description__marker">
+                            support of investment projects for the development of port infrastructure;
+                        </p>
+                        <p class="service-description__marker">
+                            certification of GTS, entering information about them in mandatory databases and registers;
+                        </p>
+                        <p class="service-description__marker">
+                            registration of permits for the construction of port terminals;
+                        </p>
+                        <p class="service-description__marker">
+                            registration of permit and other mandatory documentation required for carrying out 
+                            activities in the port (emission permit, conclusion on EIA, RTC, etc.);
+                        </p>
+                        <p class="service-description__marker">
+                            support of procedures related to the lease of state property in the port;
+                        </p>
+                        <p class="service-description__marker">
+                            support of procedures related to confirmation of the status of port operator, 
+                            maritime agent, foreign sailing line;
+                        </p>
+                        <p class="service-description__marker">
+                            support of procedures related to the inclusion of the company within the port;
+                        </p>
+                        <p class="service-description__marker">
+                            appeals against actions related to the illegal imposition of services in the port by monopoly companies.
+                        </p>
+                    </div>
+                </div>
+            </div>
         </main>
     </section>
     <section class="body__footer">
@@ -255,7 +308,7 @@
             <button type="submit" class="main-button main-button--filled">
                 Send message
             </button>
-            <button class="popup__cross button-close" type="button"></button>
+            <button class="popup__cross button-close" id="close-popup" type="button"></button>
         </form>
     </div>
     <script>
@@ -263,6 +316,9 @@
         const menuButton = document.querySelector('#open-nav');
         const crossButton = document.querySelector('#close-nav');
         const menuContacts = document.querySelector('#contacts-button');
+        const popup = document.querySelector('.popup');
+        const openPopup = document.querySelector('#open-popup');
+        const closePopup = document.querySelector('#close-popup');
     
         menuButton.addEventListener('click', () => {
             navigation.classList.add('form-showed')
@@ -274,6 +330,14 @@
 
         menuContacts.addEventListener('click', () => {
             navigation.classList.remove('form-showed')
+        })
+
+        openPopup.addEventListener('click', () => {
+            popup.classList.add('popup-showed')
+        })
+
+        closePopup.addEventListener('click', () => {
+            popup.classList.remove('popup-showed')
         })
     </script>
 </body>

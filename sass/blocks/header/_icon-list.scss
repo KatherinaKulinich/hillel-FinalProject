@@ -18,63 +18,9 @@ $screen: ("tablet": 768px,
     &__item:last-child {
         margin-bottom: 0;
     }
-    
+
     &__img {
-        display: inline-block;
-        width: 92px;
-        height: 92px;
-        border-radius: 24px;
-        background-color: #FFFFFF;
         margin-bottom: 30px;
-        position: relative;
-
-        &--ecommerce::after {
-            content: url("../images/svg/services/ecommerce.svg");
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-
-        &--support::after {
-            content: url("../images/svg/services/support.svg");
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-
-        &--coprorate::after {
-            content: url("../images/svg/services/coprorate.svg");
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-
-        &--trust::after {
-            content: url("../images/svg/services/trust.svg");
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-
-        &--protection::after {
-            content: url("../images/svg/services/protection.svg");
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-
-        &--court::after {
-            content: url("../images/svg/services/court.svg");
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
     }
     
     &__header {

@@ -1,0 +1,93 @@
+@use "../../variables" as *;
+@use "../../mixins" as *;
+@use "sass:map";
+
+$screen: ("tablet": 768px,
+          "laptop": 1024px,
+          "desktop-sd": 1440px,
+          "desktop-hd": 1920px);
+
+.service-description {
+
+    &__main {
+        padding-top: 40px;
+        padding-bottom: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 28px;
+        align-items: center;
+        text-align: center
+    }
+
+    &__main-header {
+        @include font (700, 30px, 37px);
+        @include gradient-text ();
+        margin-bottom: 0;
+    }
+
+    &__text {
+        @include font (400, 19px, 30px, #FFFFFF);
+        margin-bottom: 0;
+    }
+
+    &__benefits {
+        padding-top: 30px;
+        padding-bottom: 60px;
+        border-top: 4px solid rgba(255, 255, 255, 0.5);
+    }
+
+    &__secondary-header {
+        @include font (700, 22px, 27px, #FFFFFF);
+        margin-bottom: 30px;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    &__marker {
+        @include font (400, 18px, 26px, #FFFFFF);
+        margin-bottom: 0;
+        position: relative;
+        margin-left: 14px;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 10px;
+            left: -15px;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background-color: $hoverColor;
+        }
+    }
+
+
+}
+
+
+
+
+
+
+
+
+@media (min-width: map.get($screen, tablet)) {
+
+}
+
+@media (min-width: map.get($screen, laptop))  {
+    
+}
+
+
+@media (min-width: map.get($screen, desktop-sd)) {
+
+}
+
+@media (min-width: map.get($screen, desktop-hd)) {
+
+}
