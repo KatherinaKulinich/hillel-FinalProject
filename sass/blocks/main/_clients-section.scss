@@ -20,6 +20,13 @@ $screen: ("tablet": 768px,
     }
 }
 
+@media (min-width: map.get($screen, desktop-hd)) {
+    
+    .clients-section {
+        padding-bottom: 60px;
+    }
+}
+
 
 
 

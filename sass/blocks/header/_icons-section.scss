@@ -25,7 +25,6 @@ $screen: ("tablet": 768px,
 
 @media (min-width: map.get($screen, tablet)) {
     .icons-section {
-        padding-top: 15px;
 
         &__header {
             margin-bottom: 60px;

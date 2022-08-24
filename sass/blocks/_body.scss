@@ -6,57 +6,39 @@ $screen: ("tablet": 768px,
           "desktop-hd": 1920px);
 
 .body {
-    &__gradient-section {
-        background: linear-gradient(to bottom left, #323264, 60%, #643E72);
-        position: relative;
-
-        &::before{
-            content: '';
-            background-color: #CACADB;
-            height: 10px;
-            border-bottom-left-radius: 12px;
-            border-bottom-right-radius: 12px;
-            position: absolute;
-            bottom: -10px;
-            left: 20px;
-            right: 20px;   
-        }
-        
-        &::after {
-            content: '';
-            background-color: #E7E7F2;
-            height: 10px;
-            border-bottom-left-radius: 12px;
-            border-bottom-right-radius: 12px;
-            position: absolute;
-            bottom: -20px;
-            left: 40px;
-            right: 40px;
-        }
-    }
-
    
-
-    &__main {
-        background-color: #FFFFFF;
-    }
-
     &__icon-section {
-        padding-top: 30px;
-        padding-bottom: 60px;
+
+        &--homepage {
+            padding-top: 30px;
+            padding-bottom: 60px;
+        } 
+
+        &--services-page {
+            padding-top: 40px;
+            padding-bottom: 60px;
+        }
     }
 
     &____clients-section {
-        padding-top: 30px;
+        
+        &--homepage {
+            padding-top: 30px;
+        }
+
+        &--services-page {
+            padding-top: 70px;
+        }
     }
 
+    &__publication-section {
 
-    &__footer {
-        background-color: #F5F5FA;
-        padding-top: 80px;
+        &--services-page {
+            padding-top: 80px;
+        }
     }
 
-    &__copyright {
+    &__footer-section {
         border-top: 2px solid #E6E6F0;
     }
 
@@ -73,11 +55,22 @@ $screen: ("tablet": 768px,
 @media (min-width: map.get($screen, tablet)) {
     .body {
         &__icon-section {
-            padding-top: 15px;
+
+            &--homepage {
+                padding-top: 15px;
+            } 
         }
 
-        &__clients-section {
-            padding-bottom: 60px;
+        &____clients-section {
+        
+            &--homepage {
+                padding-top: 60px;
+            }
+    
+            &--services-page {
+                padding-top: 80px;
+            }
         }
     }
 }
+

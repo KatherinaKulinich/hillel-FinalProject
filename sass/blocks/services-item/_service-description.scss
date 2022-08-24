@@ -14,6 +14,7 @@ $screen: ("tablet": 768px,
         padding-bottom: 30px;
         display: flex;
         flex-direction: column;
+        
         gap: 28px;
         align-items: center;
         text-align: center
@@ -44,7 +45,13 @@ $screen: ("tablet": 768px,
     &__list {
         display: flex;
         flex-direction: column;
-        gap: 15px;
+        row-gap: 30px;
+    }
+
+    &__column {
+        display: flex;
+        flex-direction: column;
+        row-gap: 15px;
     }
 
     &__marker {
@@ -52,6 +59,7 @@ $screen: ("tablet": 768px,
         margin-bottom: 0;
         position: relative;
         margin-left: 14px;
+        width: 100%;
 
         &::before {
             content: '';
@@ -64,28 +72,55 @@ $screen: ("tablet": 768px,
             background-color: $hoverColor;
         }
     }
-
-
 }
-
-
-
-
-
 
 
 
 @media (min-width: map.get($screen, tablet)) {
+    .service-description {
 
+        &__main {
+            padding-top: 60px;
+            padding-bottom: 60px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        &__list {
+            flex-direction: row;
+            gap: 60px;
+            justify-content: space-between;  
+        }
+
+        &__column {
+            width: calc(50% - 30px);
+        }
+    }
 }
 
 @media (min-width: map.get($screen, laptop))  {
-    
+    .service-description {
+
+        &__main,
+        &__benefits {
+            max-width: 1080px;
+            margin-right: auto;
+            margin-left: auto; 
+        }
+    }
 }
 
 
 @media (min-width: map.get($screen, desktop-sd)) {
-
+    .service-description {
+        
+        &__main,
+        &__benefits {
+            max-width: 1360px;
+            margin-left: auto;
+            margin-right: auto; 
+        }
+    }
 }
 
 @media (min-width: map.get($screen, desktop-hd)) {

@@ -1,0 +1,43 @@
+.background {
+
+    &__gradient-section {
+        background: linear-gradient(to bottom left, #323264, 60%, #643E72);
+        position: relative;
+
+        &::before{
+            content: '';
+            background-color: #CACADB;
+            height: 10px;
+            border-bottom-left-radius: 12px;
+            border-bottom-right-radius: 12px;
+            position: absolute;
+            bottom: -10px;
+            left: 20px;
+            right: 20px;   
+        }
+        
+        &::after {
+            content: '';
+            background-color: #E7E7F2;
+            height: 10px;
+            border-bottom-left-radius: 12px;
+            border-bottom-right-radius: 12px;
+            position: absolute;
+            bottom: -20px;
+            left: 40px;
+            right: 40px;
+        }
+    }
+
+    &__main {
+        background-color: #FFFFFF;
+
+        &--space {
+            height: 80px;
+        }
+    }
+
+    &__footer {
+        background-color: #F5F5FA;
+    }
+}
