@@ -50,17 +50,27 @@ $screen: ("tablet": 768px,
     .card-list {
         flex-direction: row;
         flex-wrap: wrap;
+         
+        &--homepage {
+    
+            .card-list__item:nth-child(1),
+            .card-list__item:nth-child(2) {
+                flex-grow: 1;
+                width: 309px;
+            }
 
-        &__item:nth-child(1),
-        &__item:nth-child(2) {
-            flex-grow: 1;
-            width: 309px;
+            .card-list__item:nth-child(3) {
+                flex-grow: 2;
+                width: 648px;
+            }
         }
 
-        &__item:nth-child(3) {
-            flex-grow: 2;
-            width: 648px;
-        }
+        &--page {
+            
+            .card-list__item {
+                width: 309px;
+            }
+        }   
     }
 }
 

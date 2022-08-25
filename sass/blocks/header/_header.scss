@@ -59,9 +59,11 @@ $screen: ("tablet": 768px,
 
 @media (min-width: map.get($screen, tablet)) {
     .header {
+        padding-bottom: 60px;
+        padding-top: 35px;
 
         &__blackout {
-            padding-top: 50px;
+            padding-top: 15px;
             padding-bottom: 15px;
             background-color: transparent;
         }

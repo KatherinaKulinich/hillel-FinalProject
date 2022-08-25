@@ -11,8 +11,9 @@ $screen: ("tablet": 768px,
         &--gray::before {
             content: url("../images/svg/dot.svg");
             position: absolute;
-            left: -15px;
-            top: -2px;
+            left: -13px;
+            top: 50%;
+            transform: translateY(-50%);
         }
         
         &--white:before {
