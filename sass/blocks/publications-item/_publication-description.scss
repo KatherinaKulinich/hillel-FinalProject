@@ -108,15 +108,8 @@ $screen: ("tablet": 768px,
         &:hover {
             background-color: #EDEDF7;
         }
-
-
     }
 }
-
-
-
-
-
 
 
 @media (min-width: map.get($screen, tablet)) {

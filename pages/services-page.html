@@ -78,7 +78,7 @@
                                 <a class="navigation__item navigation__item--dark" href="../pages/publications-page.html">
                                     publications
                                 </a>
-                                <a class="navigation__item navigation__item--dark" href="#contacts">
+                                <a class="navigation__item navigation__item--dark" href="../pages/contacts-page.html">
                                     contact
                                 </a>
                             </nav>
@@ -321,7 +321,7 @@
                 <a class="navigation-mobile__item" href="../pages/publications-page.html">
                     publications
                 </a>
-                <a class="navigation-mobile__item" href="#contacts" id="contacts-button">
+                <a class="navigation-mobile__item" href="../pages/contacts-page.html" id="contacts-button">
                     contact
                 </a>
             </nav>
@@ -332,7 +332,6 @@
         const navigation = document.querySelector('.navigation-mobile');
         const menuButton = document.querySelector('#open-nav');
         const crossButton = document.querySelector('#close-nav');
-        const menuContacts = document.querySelector('#contacts-button');
     
         menuButton.addEventListener('click', () => {
             navigation.classList.add('form-showed')
@@ -342,9 +341,6 @@
             navigation.classList.remove('form-showed')
         })
 
-        menuContacts.addEventListener('click', () => {
-            navigation.classList.remove('form-showed')
-        })
     </script>
 </body>
 </html>
