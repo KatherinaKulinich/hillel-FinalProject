@@ -1,0 +1,164 @@
+@use "../../variables" as *;
+@use "../../mixins" as *;
+@use "sass:map";
+
+$screen: ("tablet": 768px,
+          "laptop": 1024px,
+          "desktop-sd": 1440px,
+          "desktop-hd": 1920px);
+
+
+.publication-description {
+    
+    padding-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    &__post-image {
+        @include bg-img ('../images/publication-cover.jpg');
+        height: 300px;
+        width: 100%;
+        border-radius: 12px;
+        margin-bottom: 30px;
+    }
+
+    &__post-main {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        border-bottom: 4px solid #E6E6F0;
+    }
+
+    &__post-name {
+        @include font (700, 20px, 24px, #323264);
+        margin-bottom: 15px;
+    }
+
+    &__post-date {
+        @include font (700, 12px, 15px, #B3B3BA);
+        letter-spacing: 1px;
+        display: inline-block;
+        text-transform: uppercase;
+    }
+
+    &__text {
+        @include font (400, 16px, 26px, #000000);
+        margin-bottom: 0;
+    }
+
+    &__main-header {
+        @include font (700, 30px, 36px);
+        @include gradient-text ();
+        margin-bottom: 0;
+    }
+
+    &__secondary-header {
+        @include font (700, 16px, 19px, #46466E);
+        margin-bottom: 15px;
+    }
+
+    &__list {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    &__list-item {
+        @include font (400, 18px, 26px, #000000);
+        margin-bottom: 15px;
+
+        &::marker {
+            @include font (700, 18px, 26px, $hoverColor);
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__image-section {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        align-items: center
+    }
+
+    &__image {
+        @include bg-img ('../images/illustration.jpg');
+        height: 196px;
+        width: 100%;
+    }
+
+    &__image-caption {
+        @include font(400, 14px, 22px, #B3B3BA);
+        margin-bottom: 0;
+    }
+
+    &__socials-icons {
+        display: flex;
+        gap: 10px;
+    }
+
+    &__icon {
+        width: 42px;
+        height: 42px;
+        border-radius: 12px;
+        padding: 9px;
+        background-color: #F5F5FA;
+
+        &:hover {
+            background-color: #EDEDF7;
+        }
+
+
+    }
+}
+
+
+
+
+
+
+
+@media (min-width: map.get($screen, tablet)) {
+    .publication-description {
+
+        &__post-main {
+            padding-top: 0;
+        }
+        
+        &__post-name {
+            font-size: 30px;
+            line-height: 37px;
+        }
+
+        &__image {
+            width: 640px;
+            height: 398px;
+        }
+
+        &__main-header {
+            font-size: 38px;
+            line-height: 46px;
+        }
+
+        &__secondary-header {
+            font-size: 22px;
+            line-height: 27px;
+        }
+    }
+}
+
+@media (min-width: map.get($screen, tablet)) {
+    .publication-description {
+
+        &__post-image {
+            height: 500px;
+        }
+    }
+}
+@media (min-width: map.get($screen, tablet)) {
+
+}
+@media (min-width: map.get($screen, tablet)) {
+
+}

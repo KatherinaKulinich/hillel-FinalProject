@@ -22,7 +22,8 @@ h4 {
 }
 
 .wrapper,
-.wrapper-benefits-description {
+.wrapper-benefits-description,
+.wrapper-publications {
     margin-left: 30px;
     margin-right: 30px;
 }
@@ -36,7 +37,8 @@ h4 {
 @media (min-width: map.get($screen, tablet))  {
     .wrapper,
     .wrapper-benefits-description,
-    .wrapper-header {
+    .wrapper-header,
+    .wrapper-publications {
         margin-left: 60px;
         margin-right: 60px;
     }
@@ -60,6 +62,12 @@ h4 {
     }
 }
 
+@media (min-width: map.get($screen, desktop-sd)) {
+    .wrapper-publications {
+        margin-left: 180px;
+        margin-right: 180px;
+    }
+}
 
 @media (min-width: map.get($screen, desktop-hd)) {
     .wrapper,
@@ -71,6 +79,12 @@ h4 {
 
     .wrapper-secondary {
         width: 1720px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .wrapper-publications {
+        width: 1360px;
         margin-left: auto;
         margin-right: auto;
     }
