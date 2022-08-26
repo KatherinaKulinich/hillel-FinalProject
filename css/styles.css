@@ -339,7 +339,8 @@ h4 {
 
 .wrapper,
 .wrapper-benefits-description,
-.wrapper-publications {
+.wrapper-publications,
+.wrapper-contacts-page {
   margin-left: 30px;
   margin-right: 30px;
 }
@@ -353,7 +354,8 @@ h4 {
   .wrapper,
 .wrapper-benefits-description,
 .wrapper-header,
-.wrapper-publications {
+.wrapper-publications,
+.wrapper-contacts-page {
     margin-left: 60px;
     margin-right: 60px;
   }
@@ -374,7 +376,8 @@ h4 {
   }
 }
 @media (min-width: 1440px) {
-  .wrapper-publications {
+  .wrapper-publications,
+.wrapper-contacts-page {
     margin-left: 180px;
     margin-right: 180px;
   }
@@ -391,7 +394,8 @@ h4 {
     margin-left: auto;
     margin-right: auto;
   }
-  .wrapper-publications {
+  .wrapper-publications,
+.wrapper-contacts-page {
     width: 1360px;
     margin-left: auto;
     margin-right: auto;
@@ -473,10 +477,10 @@ h4 {
     padding-top: 80px;
   }
 }
-.popup {
+.popup--modal {
   display: none;
 }
-.popup__form-box {
+.popup--modal .popup__form-box {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -485,6 +489,13 @@ h4 {
   width: 100%;
   max-width: 650px;
   background-color: #F5F5FA;
+}
+.popup--static .popup__form-box {
+  padding: 30px;
+  width: 100%;
+  background-color: #F5F5FA;
+  border-radius: 12px;
+  position: relative;
 }
 .popup__fieldset {
   border: none;
@@ -559,7 +570,7 @@ h4 {
 }
 .main-button--filled {
   width: 100%;
-  padding: 18px 96px;
+  padding: 18px;
 }
 .main-button--short {
   width: 212px;
@@ -1148,6 +1159,9 @@ h4 {
     line-height: 20px;
     color: #24A3FF;
     text-decoration: none;
+  }
+  .navigation__item:hover {
+    color: #F0145A;
   }
   .navigation__item--dark {
     color: #FFFFFF;
@@ -1904,5 +1918,87 @@ h4 {
 @media (min-width: 768px) {
   .publication-description__post-image {
     height: 500px;
+  }
+}
+.contacts-page {
+  padding-top: 15px;
+  padding-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.contacts-page__communications {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.contacts-page__adress {
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 30px;
+  color: #323264;
+  font-style: normal;
+}
+.contacts-page__connection {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border-top: 4px solid #E6E6F0;
+  border-bottom: 4px solid #E6E6F0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.contacts-page__tel {
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 30px;
+  color: #46466E;
+  text-decoration: none;
+}
+.contacts-page__mail {
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 30px;
+  color: #24A3FF;
+  text-decoration: none;
+}
+.contacts-page__mail:hover {
+  color: #F0145A;
+}
+.contacts-page__facebook-link {
+  display: flex;
+  gap: 10px;
+  text-decoration: none;
+  align-items: center;
+  width: 155px;
+}
+.contacts-page__facebook-link:hover path, .contacts-page__facebook-link:hover .contacts-page__facebook-text {
+  fill: #F0145A;
+  color: #F0145A;
+}
+.contacts-page__facebook-text {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+  color: #24A3FF;
+  text-transform: uppercase;
+  margin-bottom: 0;
+  letter-spacing: 1px;
+}
+
+@media (min-width: 768px) {
+  .contacts-page {
+    padding-top: 0;
+    padding-bottom: 60px;
+    gap: 60px;
+    justify-content: space-between;
+  }
+}
+@media (min-width: 1024px) {
+  .contacts-page {
+    flex-direction: row;
+  }
+  .contacts-page__communications, .contacts-page__popup {
+    width: calc(50% - 30px);
   }
 }

@@ -28,6 +28,10 @@ $screen: ("tablet": 768px,
             @include font (700, 16px, 20px);
             text-decoration: none;
 
+            &:hover {
+                color: $hoverColor;
+            }
+
             &--dark {
                 color: #FFFFFF;
             }

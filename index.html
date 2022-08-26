@@ -463,59 +463,6 @@
             <button id="close-nav" class="navigation-mobile__cross button-close" type="button"></button>
         </div>
     </div>
-    <div class="body__popup popup">
-        <form 
-            action="#" 
-            method="post" 
-            name="popup"
-            class="popup__form-box"
-        >
-            <fieldset class="popup__fieldset">
-                <legend class="popup__main-header">
-                    We would like to help you
-                </legend>
-                <div class="popup__inputs">
-                    <input 
-                        type="text" 
-                        name="user-name" 
-                        placeholder="Name" 
-                        class="form-input"
-                    >
-                    <textarea 
-                        placeholder="Message"
-                        name="user-issue"  
-                        rows="7" 
-                        class="form-input"
-                    ></textarea>
-                </div>
-            </fieldset>
-            <fieldset class="popup__fieldset">
-                <legend class="popup__secondary-header">
-                    How to answer you?
-                </legend>
-                <div class="popup__inputs">
-                    <input 
-                        type="tel" 
-                        name="user-tel" 
-                        placeholder="Phone number" 
-                        minlength="10"
-                        maxlength="13"
-                        class="form-input"
-                    >
-                    <input 
-                        type="email" 
-                        name="user-email" 
-                        placeholder="Email" 
-                        class="form-input"
-                    >
-                </div>
-            </fieldset>
-            <button type="submit" class="main-button main-button--filled">
-                Send message
-            </button>
-            <button class="popup__cross button-close" type="button"></button>
-        </form>
-    </div>
     <script>
         const navigation = document.querySelector('.navigation-mobile');
         const menuButton = document.querySelector('#open-nav');
