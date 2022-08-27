@@ -7,6 +7,10 @@
     &__header {
         @include font (700, 16px, 19px, $headerColor);
         margin-bottom: 15px;
+
+        &:hover {
+            color: $hoverColor;
+        }
     }
 
     &__date {
