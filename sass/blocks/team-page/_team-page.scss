@@ -1,0 +1,44 @@
+@use "../../variables" as *;
+@use "../../mixins" as *;
+@use "sass:map";
+
+$screen: ("tablet": 768px,
+          "laptop": 1024px,
+          "desktop-sd": 1440px,
+          "desktop-hd": 1920px);
+
+.team-page {
+    padding-top: 30px;
+    padding-bottom: 60px;
+
+    &__header {
+        @include font(700, 30px, 37px);
+        @include gradient-text();
+        margin-bottom: 30px;
+    }
+
+    &__cards {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+}
+
+
+@media (min-width: map.get($screen, tablet)) {
+    .team-page {
+        padding-top: 0;
+
+        &__header {
+            font-size: 38px;
+            line-height: 46px;
+            margin-bottom: 60px;
+        }
+
+        &__cards {
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 60px;
+        }
+    }
+}

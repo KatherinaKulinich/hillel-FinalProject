@@ -1,0 +1,98 @@
+@use "../../variables" as *;
+@use "../../mixins" as *;
+@use "sass:map";
+
+$screen: ("tablet": 768px,
+          "laptop": 1024px,
+          "desktop-sd": 1440px,
+          "desktop-hd": 1920px);
+
+.team-card {
+   
+    &__image {
+        height: 300px;
+        border-radius: 12px;
+        margin-bottom: 15px;
+
+        &--first {
+            @include bg-img ('../images/team-1.jpg')
+        }
+
+        &--second {
+            @include bg-img ('../images/team-2.jpg')
+        }
+
+        &--third {
+            @include bg-img ('../images/team-3.jpg')
+        }
+
+        &--fourth {
+            @include bg-img ('../images/team-4.jpg')
+        }
+
+        &--fifth {
+            @include bg-img ('../images/team-5.jpg')
+        }
+
+        &--sixth {
+            @include bg-img ('../images/team-6.jpg')
+        }
+    }
+
+    &__information {
+        display: grid;
+        grid-template-columns: 1fr 40px;
+        grid-template-rows: auto auto;
+    }
+
+    &__link {
+        grid-column: 2/3;
+        grid-row: 1/-1;
+        align-self: center;
+        justify-self: end;
+        background-color: #F5F5FA;
+        padding: 10px 13px;
+        border-radius: 50%;
+
+        &:hover path {
+            stroke: $hoverColor;
+        }
+    }
+
+    &__name {
+        grid-column: 1/2;
+        grid-row: 1/2;
+        @include font(700, 16px, 20px, #323264);
+        text-decoration: none;
+        margin-bottom: 5px;
+
+        &:hover {
+            color: $hoverColor;
+        }
+    }
+
+    &__job {
+        grid-column: 1/2;
+        grid-row: 2/3;
+        @include font(400, 14px, 22px, #B3B3BA);
+        margin-bottom: 0;
+    }
+}
+
+
+
+@media (min-width: map.get($screen, tablet)) {
+    .team-card {
+        width: calc(50% - 30px);
+
+        &__image {
+            height: 400px;
+        }
+    }
+}
+
+@media (min-width: map.get($screen, laptop)) {
+    .team-card {
+        width: calc(33.33% - 40px);
+    }
+}
