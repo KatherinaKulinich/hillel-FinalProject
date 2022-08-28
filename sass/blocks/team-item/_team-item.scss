@@ -1,0 +1,128 @@
+@use "../../variables" as *;
+@use "../../mixins" as *;
+@use "sass:map";
+
+$screen: ("tablet": 768px,
+          "laptop": 1024px,
+          "desktop-sd": 1440px,
+          "desktop-hd": 1920px);
+
+.team-item {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    &__image {
+        @include bg-img ('../images/team-5.jpg');
+        height: 375px;
+        width: 100%;
+        border-radius: 12px;
+    }
+
+    &__main-header {
+        margin-bottom: 15px;
+        @include font (700, 38px, 46px);
+        @include gradient-text ();
+    }
+    
+    &__job {
+        @include font(400, 14px, 22px, #B3B3BA);
+        margin-bottom: 10px;
+    }
+
+    &__link {
+        @include font (400, 16px, 20px);
+        margin-bottom: 10px;
+        text-decoration: none;
+        display: block;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__information {
+        padding-top: 30px;
+        border-top: 4px solid #E6E6F0;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    &__text {
+        margin-bottom: 0;
+        @include font (400, 16px, 26px, #000000);
+    }
+
+    &__secondary-header {
+        @include font(700, 14px, 17px, #323264);
+        margin-bottom: 15px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+}
+
+
+
+@media (min-width: map.get($screen, tablet)) {
+    .team-item {
+        padding-top: 0;
+        padding-bottom: 60px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+
+        &__image {
+            grid-column: 1/2;
+            grid-row: 1/2;
+        }
+
+        &__information {
+            grid-column: 1/-1;
+            grid-row: 2/3;
+        }
+
+        &__personal-data {
+            grid-column: 2/3;
+            grid-row: 1/2;
+            align-self: center;
+        }
+    }   
+}
+
+@media (min-width: map.get($screen, laptop)) {
+    .team-item {
+        column-gap: 60px;
+        grid-template-columns: 300px 1fr;
+
+        &__image {
+            grid-column: 1/2;
+            grid-row: 1/-1;
+            width: 300px;
+            height: 375px;
+        }
+
+        &__information {
+            grid-column: 2/3;
+            grid-row: 2/3;
+        }
+
+        &__personal-data {
+            grid-column: 2/3;
+            grid-row: 1/2;
+        }
+    }   
+}
+
+@media (min-width: map.get($screen, desktop-sd)) {
+    .team-item {
+        grid-template-columns: 400px 1fr;
+
+        &__image {
+            width: 400px;
+            height: 500px;
+        }
+    } 
+}

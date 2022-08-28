@@ -15,27 +15,27 @@ $screen: ("tablet": 768px,
         margin-bottom: 15px;
 
         &--first {
-            @include bg-img ('../images/team-1.jpg')
+            @include bg-img ('../images/team-1.jpg');
         }
 
         &--second {
-            @include bg-img ('../images/team-2.jpg')
+            @include bg-img ('../images/team-2.jpg');
         }
 
         &--third {
-            @include bg-img ('../images/team-3.jpg')
+            @include bg-img ('../images/team-3.jpg');
         }
 
         &--fourth {
-            @include bg-img ('../images/team-4.jpg')
+            @include bg-img ('../images/team-4.jpg');
         }
 
         &--fifth {
-            @include bg-img ('../images/team-5.jpg')
+            @include bg-img ('../images/team-5.jpg');
         }
 
         &--sixth {
-            @include bg-img ('../images/team-6.jpg')
+            @include bg-img ('../images/team-6.jpg');
         }
     }
 
