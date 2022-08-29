@@ -1,5 +1,5 @@
-@use "../variables" as *;
-@use "../mixins" as *;
+@use "../../installations/variables" as *;
+@use "../../installations/mixins" as *;
 
 .slider {
     display: flex;

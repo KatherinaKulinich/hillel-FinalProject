@@ -1,5 +1,5 @@
-@use "../../../mixins" as *;
-@use "../../../variables" as *;
+@use "../../../installations/variables" as *;
+@use "../../../installations/mixins" as *;
 @use "sass:map";
 
 $screen: ("tablet": 768px,

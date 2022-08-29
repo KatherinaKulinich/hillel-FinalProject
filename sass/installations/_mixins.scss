@@ -1,4 +1,4 @@
-@use "./variables" as *;
+@use "../installations/variables" as *;
 
 @mixin font ($fw, $fs, $lh, $col: $regular-color) {
     font-weight: $fw;
