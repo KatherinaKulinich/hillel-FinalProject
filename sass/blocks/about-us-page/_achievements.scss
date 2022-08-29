@@ -1,0 +1,53 @@
+@use "../../variables" as *;
+@use "../../mixins" as *;
+@use "sass:map";
+
+$screen: ("tablet": 768px,
+          "laptop": 1024px,
+          "desktop-sd": 1440px,
+          "desktop-hd": 1920px);
+
+.achievements {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding-left: 30px;
+    border-left: 4px solid #E6E6F0;
+
+    &__point {
+        display: flex;
+        flex-direction: row;
+        gap: 13px;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+    &__icon {
+        width: 32px;
+        height: 32px;
+        
+        &--flag {
+            @include bg-img ('../images/svg/icon-flag.svg');
+        }
+
+        &--bag {
+            @include bg-img ('../images/svg/icon-bag.svg');
+        }
+
+        &--star {
+            @include bg-img ('../images/svg/icon-star.svg');
+        }
+    }
+
+    &__icon-text {
+        @include font (700, 36px, 44px);
+        @include gradient-text();
+        margin-bottom: 0;
+    }
+
+    &__point-text {
+        @include font (400, 16px, 20px, #323264);
+        margin-bottom: 0;
+    }
+}
+

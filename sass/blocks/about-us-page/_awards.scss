@@ -1,0 +1,87 @@
+@use "../../variables" as *;
+@use "../../mixins" as *;
+@use "sass:map";
+
+$screen: ("tablet": 768px,
+          "laptop": 1024px,
+          "desktop-sd": 1440px,
+          "desktop-hd": 1920px);
+
+.awards {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+
+    &__header {
+        @include font (700, 14px, 17px, #323264);
+        margin-bottom: 0;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    &__gallery {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__image-background {
+        width: 255px;
+        height: 90px;
+        border-radius: 12px;
+        background-color: #FFFFFF;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &:nth-child(n+2) {
+            display: none;
+        }
+    }
+
+    &__image {
+        height: 40px;
+    }
+}
+
+
+@media (min-width: map.get($screen, tablet)) {
+    .awards {
+
+        &__slider-button {
+
+            &:nth-child(n+4) {
+                display: none;
+            }
+        }
+
+        &__gallery {
+            flex-direction: row;
+            gap: 40px;
+        }
+    
+        &__image-background {
+            width: 132px;
+            height: 90px;
+
+            &:nth-child(n+2) {
+                display: flex;
+            }
+        }
+    }
+}
+
+@media (min-width: map.get($screen, tablet)) {
+    .awards {
+
+        &__image-background {
+            width: 196px;
+            height: 110px;
+        }
+
+        &__image {
+            height: 60px;
+        }
+    }
+}

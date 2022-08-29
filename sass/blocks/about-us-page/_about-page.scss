@@ -1,0 +1,160 @@
+@use "../../variables" as *;
+@use "../../mixins" as *;
+@use "sass:map";
+
+$screen: ("tablet": 768px,
+          "laptop": 1024px,
+          "desktop-sd": 1440px,
+          "desktop-hd": 1920px);
+
+.about-page {
+    padding-bottom: 30px;
+    
+    &__first-part {
+        padding-bottom: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    &__second-part {
+        padding-top: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    &__text-part {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    &__main-info {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    &__main-header {
+        @include font (700, 30px, 37px);
+        @include gradient-text ();
+        margin-bottom: 0;
+    }
+
+    &__text {
+        @include font (400, 19px, 30px, #000000);
+        margin-bottom: 0;
+    }
+
+    &__background {
+        @include bg-img ('../images/team-all.jpg');
+        height: 114px;
+        width: 100%;
+        position: relative;
+    }
+
+    &__background-text {
+        @include font (700, 36px, 44px, #FFFFFF);
+        opacity: 80%;
+        letter-spacing: 13px;
+        text-transform: uppercase;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+   
+@media (min-width: map.get($screen, tablet)) {
+    .about-page {
+        padding-bottom: 60px;
+
+        &__first-part {
+            padding-bottom: 60px;
+        }
+
+        &__second-part {
+            padding-top: 60px;
+        }
+
+        &__main-header {
+            font-size: 38px;
+            line-height: 46px;
+        }
+
+        &__background {
+            height: 234px;
+        }
+
+        &__background-text {
+            font-size: 46px;
+            line-height: 56px;
+            letter-spacing: 63px;
+        }
+
+        &__main-header {
+            font-size: 38px;
+            line-height: 46px;
+        }
+    }
+}
+
+@media (min-width: map.get($screen, laptop)) {
+   .about-page {
+   
+        &__background {
+            height: 312px;
+        }
+
+        &__background-text {
+            font-size: 86px;
+            line-height: 105px;
+        }
+
+        &__first-part,
+        &__second-part {
+            display: grid;
+            grid-template-columns: 1fr 385px;
+        }
+
+        &__second-part {
+            column-gap: 60px;
+        }
+
+        &__achievements {
+            grid-column: 2/3;
+            align-self: flex-start;
+        }
+
+        &__main-info,
+        &__text-part {
+            grid-column: 1/2;
+        }
+    }
+}
+
+@media (min-width: map.get($screen, desktop-sd)) {
+    .about-page {
+
+        &__background {
+            height: 438px;
+        }
+
+        &__background-text {
+            font-size: 96px;
+            line-height: 117px;
+        }
+    }
+}
+
+@media (min-width: map.get($screen, desktop-hd)) {
+    .about-page {
+
+        &__background {
+            height: 584px;
+        }
+    }
+}
+
