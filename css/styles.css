@@ -1507,13 +1507,12 @@ h4 {
     width: 648px;
   }
   .card-list--page .card-list__item {
-    width: 309px;
+    width: calc(50% - 15px);
   }
 }
 @media (min-width: 1024px) {
   .card-list__item {
     flex-grow: 1;
-    min-width: 281px;
     max-width: calc(33.33% - 20px);
   }
 }
