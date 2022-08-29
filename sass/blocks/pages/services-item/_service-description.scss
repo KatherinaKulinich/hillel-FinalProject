@@ -1,5 +1,5 @@
-@use "../../variables" as *;
-@use "../../mixins" as *;
+@use "../../../mixins" as *;
+@use "../../../variables" as *;
 @use "sass:map";
 
 $screen: ("tablet": 768px,
@@ -10,18 +10,16 @@ $screen: ("tablet": 768px,
 .service-description {
 
     &__main {
-        padding-top: 40px;
-        padding-bottom: 30px;
+        @include paddingXX (40px, 30px);
         display: flex;
         flex-direction: column;
-        
         gap: 28px;
         align-items: center;
         text-align: center
     }
 
     &__main-header {
-        @include font (700, 30px, 37px);
+        @include header-text-mobile;
         @include gradient-text ();
         margin-bottom: 0;
     }
@@ -32,8 +30,7 @@ $screen: ("tablet": 768px,
     }
 
     &__benefits {
-        padding-top: 30px;
-        padding-bottom: 60px;
+        @include paddingXX (30px, 60px);
         border-top: 4px solid rgba(255, 255, 255, 0.5);
     }
 
@@ -66,10 +63,9 @@ $screen: ("tablet": 768px,
             position: absolute;
             top: 10px;
             left: -15px;
-            width: 6px;
-            height: 6px;
+            @include size (6px);
             border-radius: 50%;
-            background-color: $hoverColor;
+            background-color: $hover-color;
         }
     }
 }
@@ -80,10 +76,8 @@ $screen: ("tablet": 768px,
     .service-description {
 
         &__main {
-            padding-top: 0;
-            padding-bottom: 60px;
-            margin-left: auto;
-            margin-right: auto;
+            @include paddingXX (0px, 60px);
+            @include margin-auto;
         }
 
         &__list {
@@ -104,8 +98,7 @@ $screen: ("tablet": 768px,
         &__main,
         &__benefits {
             max-width: 1080px;
-            margin-right: auto;
-            margin-left: auto; 
+            @include margin-auto;
         }
     }
 }
@@ -117,12 +110,7 @@ $screen: ("tablet": 768px,
         &__main,
         &__benefits {
             max-width: 1360px;
-            margin-left: auto;
-            margin-right: auto; 
+            @include margin-auto; 
         }
     }
-}
-
-@media (min-width: map.get($screen, desktop-hd)) {
-
 }

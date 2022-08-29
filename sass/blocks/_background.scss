@@ -1,3 +1,6 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
 .background {
 
     &__gradient-section {
@@ -30,7 +33,7 @@
     }
 
     &__main {
-        background-color: #FFFFFF;
+        background-color: $main-background;
 
         &--space {
             height: 80px;
@@ -38,6 +41,6 @@
     }
 
     &__footer {
-        background-color: #F5F5FA;
+        background-color: $secondary-background;
     }
 }

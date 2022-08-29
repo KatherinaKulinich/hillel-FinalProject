@@ -22,7 +22,7 @@ $screen: ("tablet": 768px,
         padding: 64px 12px 12px 12px;
         border-top-left-radius: 12px;
         border-top-right-radius: 12px;
-        background-color: #FFFFFF;
+        background-color: $main-background;
         position: absolute;
         bottom: 0;
         right: 8px;
@@ -40,12 +40,12 @@ $screen: ("tablet": 768px,
         width: 100%;
         padding: 7px 110px;
         border-radius: 12px;
-        background-color: #F5F5FA;
+        background-color: $secondary-background;
         @include font(700, 24px, 29px);
         text-decoration: none;
 
         &--active {
-            color: $hoverColor;
+            color: $hover-color;
         }
 
         &:active {

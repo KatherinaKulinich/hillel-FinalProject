@@ -1,3 +1,5 @@
+@use "../variables" as *;
+@use "../mixins" as *;
 @use "sass:map";
 
 $screen: ("tablet": 768px,
@@ -10,13 +12,11 @@ $screen: ("tablet": 768px,
     &__icon-section {
 
         &--homepage {
-            padding-top: 30px;
-            padding-bottom: 60px;
+            @include paddingXX (30px, 60px);
         } 
 
         &--services-page {
-            padding-top: 0;
-            padding-bottom: 60px;
+            @include paddingXX (0px, 60px);
         }
     }
 

@@ -1,5 +1,5 @@
-@use "../../variables" as *;
-@use "../../mixins" as *;
+@use "../../../mixins" as *;
+@use "../../../variables" as *;
 @use "sass:map";
 
 $screen: ("tablet": 768px,
@@ -8,32 +8,30 @@ $screen: ("tablet": 768px,
           "desktop-hd": 1920px);
 
 .team-item {
-    padding-top: 30px;
-    padding-bottom: 30px;
+    @include paddingX (30px);
     display: flex;
     flex-direction: column;
     gap: 30px;
 
     &__image {
         @include bg-img ('../images/team-5.jpg');
-        height: 375px;
-        width: 100%;
+        @include size (100%, 375px);
         border-radius: 12px;
     }
 
     &__main-header {
         margin-bottom: 15px;
-        @include font (700, 38px, 46px);
+        @include header-text-mobile;
         @include gradient-text ();
     }
     
     &__job {
-        @include font(400, 14px, 22px, #B3B3BA);
+        @include font(400, 14px, 22px, $secondary-text-color);
         margin-bottom: 10px;
     }
 
     &__link {
-        @include font (400, 16px, 20px);
+        @include regular-text;
         margin-bottom: 10px;
         text-decoration: none;
         display: block;
@@ -45,7 +43,7 @@ $screen: ("tablet": 768px,
 
     &__information {
         padding-top: 30px;
-        border-top: 4px solid #E6E6F0;
+        border-top: $separator;
         display: flex;
         flex-direction: column;
         gap: 30px;
@@ -57,10 +55,9 @@ $screen: ("tablet": 768px,
     }
 
     &__secondary-header {
-        @include font(700, 14px, 17px, #323264);
+        @include caps-text;
+        color: $main-text-color;
         margin-bottom: 15px;
-        letter-spacing: 1px;
-        text-transform: uppercase;
     }
 }
 
@@ -68,8 +65,7 @@ $screen: ("tablet": 768px,
 
 @media (min-width: map.get($screen, tablet)) {
     .team-item {
-        padding-top: 0;
-        padding-bottom: 60px;
+        @include paddingXX (0, 60px);
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto auto;
@@ -100,8 +96,7 @@ $screen: ("tablet": 768px,
         &__image {
             grid-column: 1/2;
             grid-row: 1/-1;
-            width: 300px;
-            height: 375px;
+            @include size (300px, 375x);
         }
 
         &__information {
@@ -121,8 +116,7 @@ $screen: ("tablet": 768px,
         grid-template-columns: 400px 1fr;
 
         &__image {
-            width: 400px;
-            height: 500px;
+            @include size (400px, 500px);
         }
     } 
 }

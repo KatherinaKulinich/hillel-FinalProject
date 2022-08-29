@@ -1,5 +1,5 @@
-@use "../../variables" as *;
-@use "../../mixins" as *;
+@use "../../../mixins" as *;
+@use "../../../variables" as *;
 @use "sass:map";
 
 $screen: ("tablet": 768px,
@@ -9,7 +9,6 @@ $screen: ("tablet": 768px,
 
 
 .publication-description {
-    
     padding-bottom: 60px;
     display: flex;
     flex-direction: column;
@@ -17,25 +16,23 @@ $screen: ("tablet": 768px,
 
     &__post-image {
         @include bg-img ('../images/publication-cover.jpg');
-        height: 300px;
-        width: 100%;
+        @include size (100%, 300px);
         border-radius: 12px;
         margin-bottom: 30px;
     }
 
     &__post-main {
-        padding-top: 30px;
-        padding-bottom: 30px;
-        border-bottom: 4px solid #E6E6F0;
+        @include paddingX (30px);
+        border-bottom: $separator;
     }
 
     &__post-name {
-        @include font (700, 20px, 24px, #323264);
+        @include font (700, 20px, 24px, $main-text-color);
         margin-bottom: 15px;
     }
 
     &__post-date {
-        @include font (700, 12px, 15px, #B3B3BA);
+        @include font (700, 12px, 15px, $secondary-text-color);
         letter-spacing: 1px;
         display: inline-block;
         text-transform: uppercase;
@@ -47,7 +44,7 @@ $screen: ("tablet": 768px,
     }
 
     &__main-header {
-        @include font (700, 30px, 36px);
+        @include header-text-mobile;
         @include gradient-text ();
         margin-bottom: 0;
     }
@@ -67,7 +64,7 @@ $screen: ("tablet": 768px,
         margin-bottom: 15px;
 
         &::marker {
-            @include font (700, 18px, 26px, $hoverColor);
+            @include font (700, 18px, 26px, $hover-color);
         }
 
         &:last-child {
@@ -84,12 +81,11 @@ $screen: ("tablet": 768px,
 
     &__image {
         @include bg-img ('../images/illustration.jpg');
-        height: 196px;
-        width: 100%;
+        @include size (100%, 196px);
     }
 
     &__image-caption {
-        @include font(400, 14px, 22px, #B3B3BA);
+        @include font(400, 14px, 22px, $secondary-text-color);
         margin-bottom: 0;
     }
 
@@ -99,11 +95,10 @@ $screen: ("tablet": 768px,
     }
 
     &__icon {
-        width: 42px;
-        height: 42px;
+        @include size (42px);
         border-radius: 12px;
         padding: 9px;
-        background-color: #F5F5FA;
+        background-color: $secondary-background;
 
         &:hover {
             background-color: #EDEDF7;
@@ -125,13 +120,11 @@ $screen: ("tablet": 768px,
         }
 
         &__image {
-            width: 640px;
-            height: 398px;
+            @include size (640px, 398px);
         }
 
         &__main-header {
-            font-size: 38px;
-            line-height: 46px;
+            @include header-text-desktop;
         }
 
         &__secondary-header {
@@ -148,10 +141,4 @@ $screen: ("tablet": 768px,
             height: 500px;
         }
     }
-}
-@media (min-width: map.get($screen, tablet)) {
-
-}
-@media (min-width: map.get($screen, tablet)) {
-
 }

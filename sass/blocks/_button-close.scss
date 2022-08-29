@@ -1,6 +1,5 @@
 .button-close {
-    width: 32px;
-    height: 32px;
+    @include size (32px);
     border: none;
     background-color: rgba(245, 245, 250, 0.1);
     background-image: url("../images/svg/close.svg");

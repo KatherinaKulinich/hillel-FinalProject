@@ -1,5 +1,5 @@
-@use "../../variables" as *;
-@use "../../mixins" as *;
+@use "../../../mixins" as *;
+@use "../../../variables" as *;
 @use "sass:map";
 
 $screen: ("tablet": 768px,
@@ -13,24 +13,21 @@ $screen: ("tablet": 768px,
     text-align: center;
 
     &__header {
-        @include font (700, 14px, 17px, #323264);
+        @include caps-text;
+        color: $main-text-color;
         margin-bottom: 0;
-        text-transform: uppercase;
-        letter-spacing: 1px;
     }
 
     &__gallery {
-        padding-top: 30px;
-        padding-bottom: 30px;
+        @include paddingX (30px);
         display: flex;
         justify-content: center;
     }
 
     &__image-background {
-        width: 255px;
-        height: 90px;
+        @include size (255px, 90px);
         border-radius: 12px;
-        background-color: #FFFFFF;
+        background-color: $main-background;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -62,8 +59,7 @@ $screen: ("tablet": 768px,
         }
     
         &__image-background {
-            width: 132px;
-            height: 90px;
+            @include size (132px, 90px);
 
             &:nth-child(n+2) {
                 display: flex;
@@ -76,8 +72,7 @@ $screen: ("tablet": 768px,
     .awards {
 
         &__image-background {
-            width: 196px;
-            height: 110px;
+            @include size (196px, 110px);
         }
 
         &__image {

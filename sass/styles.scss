@@ -26,7 +26,7 @@
 @import "./blocks/header/navigation";
 @import "./blocks/header/navigation-mobile";
 @import "./blocks/main/team-section";
-@import "./blocks/main/slider";
+@import "./blocks/slider";
 @import "./blocks/main/clients-section";
 @import "./blocks/main/client-list";
 @import "./blocks/footer/publications-section";
@@ -35,15 +35,16 @@
 @import "./blocks/footer/footer";
 
 @import "./blocks/category-logo";
-@import "./blocks/services-item/service-description";
-@import "./blocks/publications-page/publications";
-@import "./blocks/publications-item/publication-description";
-@import "./blocks/contacts-page/contacts-page";
-@import "./blocks/team-page/team-card";
-@import "./blocks/team-page/team-page";
-@import "./blocks/team-item/team-item";
-@import "./blocks/about-us-page/about-page";
-@import "./blocks/about-us-page/achievements";
-@import "./blocks/about-us-page/awards";
+
+@import "./blocks/pages/services-item/service-description";
+@import "./blocks/pages/publications-page/publications";
+@import "./blocks/pages/publications-item/publication-description";
+@import "./blocks/pages/contacts-page/contacts-page";
+@import "./blocks/pages/team-page/team-card";
+@import "./blocks/pages/team-page/team-page";
+@import "./blocks/pages/team-item/team-item";
+@import "./blocks/pages/about-us-page/about-page";
+@import "./blocks/pages/about-us-page/achievements";
+@import "./blocks/pages/about-us-page/awards";
 
 

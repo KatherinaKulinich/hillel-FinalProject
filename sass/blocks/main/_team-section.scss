@@ -8,9 +8,7 @@ $screen: ("tablet": 768px,
           "desktop-hd": 1920px);
 
 .team-section {
-    padding-top: 50px;
-    padding-bottom: 30px;
-
+    @include paddingXX (50px, 30px);
     &__card {
         display: flex;
         flex-direction: column;
@@ -27,7 +25,7 @@ $screen: ("tablet": 768px,
 
     &__article {
         padding: 30px;
-        background-color: #F5F5FA;
+        background-color: $secondary-background;
         border-bottom-left-radius: 12px;
         border-bottom-right-radius: 12px;
         overflow: hidden;
@@ -42,12 +40,12 @@ $screen: ("tablet": 768px,
     }
 
     &__author {
-        @include font (700, 16px, 19px, #B3B3BA);
+        @include font (700, 16px, 19px, $secondary-text-color);
         margin-bottom: 6px;
     }
 
     &__position {
-        @include font (400, 14px, 22px, #B3B3BA);
+        @include font (400, 14px, 22px, $secondary-text-color);
         margin-bottom:0;
     }
 }

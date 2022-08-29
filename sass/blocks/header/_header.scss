@@ -10,8 +10,7 @@ $screen: ("tablet": 768px,
 .header {
     
     &__blackout {
-        padding-top: 10px;
-        padding-bottom: 10px;
+        @include paddingX (10px);
 
         &--dark {
             background-color: rgba(245, 245, 250, 0.2);
@@ -36,13 +35,11 @@ $screen: ("tablet": 768px,
     &__logo-mobile {
         display: flex;
         justify-content: space-between;
-        padding-top: 15px;
-        padding-bottom: 15px;
+        @include paddingX (15px);
     }
 
     &__logo-icon {
-        width: 70px;
-        height: 32px;
+       @include size (70px, 32px);
     }
 
     &__button {
@@ -59,12 +56,10 @@ $screen: ("tablet": 768px,
 
 @media (min-width: map.get($screen, tablet)) {
     .header {
-        padding-bottom: 60px;
-        padding-top: 35px;
+        @include paddingXX (60px, 35px);
 
         &__blackout {
-            padding-top: 15px;
-            padding-bottom: 15px;
+            @include paddingX (15px);
             background-color: transparent;
         }
 
@@ -91,8 +86,7 @@ $screen: ("tablet": 768px,
         }
 
         &__logo-icon {
-            width: 130px;
-            height: 60px;
+            @include size (130px, 60px);
         }
     }
 }
@@ -128,17 +122,8 @@ $screen: ("tablet": 768px,
             }
 
             &__logo-mobile {
-                padding-top: 0;
-                padding-bottom: 0;
+                @include paddingX (0);
             }
         }
     }
 
-
-@media (min-width: map.get($screen, desktop-sd)) {
-
-}
-
-@media (min-width: map.get($screen, desktop-hd)) {
-
-}

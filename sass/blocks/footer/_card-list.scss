@@ -13,7 +13,7 @@ $screen: ("tablet": 768px,
     gap: 30px;
 
     &__item {
-        background-color: #FFFFFF;
+        background-color: $main-background;
         border-radius: 8px;
         overflow: hidden;
         display: block;
@@ -21,29 +21,26 @@ $screen: ("tablet": 768px,
     }
 
     &__image {
+        height: 200px;
+
         &--publication-first {
             @include bg-img ("../images/publication-1.png");
-            height: 200px;
         }
 
         &--publication-second {
             @include bg-img ("../images/publication-2.png");
-            height: 200px;
         }
 
         &--publication-third {
             @include bg-img ("../images/publication-3.png");
-            height: 200px;
         }
 
         &--publication-fourth {
             @include bg-img ("../images/publication-4.png");
-            height: 200px;
         }
 
         &--publication-fifth {
             @include bg-img ("../images/publication-5.png");
-            height: 200px;
         }
     }
 }

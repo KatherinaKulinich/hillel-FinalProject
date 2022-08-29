@@ -15,9 +15,9 @@ $screen: ("tablet": 768px,
         position: relative;
     
     &__header {
-        @include font (700, 38px, 46px, #FFFFFF);
-        margin-top: 0;
-        margin-bottom: 0;
+        @include header-text-desktop;
+        color: $main-background;
+        @include marginY (0);
         min-width: 315px;
         text-align: center; 
         position: absolute;
@@ -27,26 +27,25 @@ $screen: ("tablet": 768px,
     }
 
     &__button {
-        color: #FFFFFF;
+        color: $main-background;
         border: 2px solid rgba(255, 255, 255, 0.5);
         border-radius: 50%;
         position: absolute;
         bottom: 30px;
         left: 50%;
         transform: translateX(-50%);
-        width: 42px;
-        height: 42px;
+        @include size (32px);
         display: flex;
         justify-content: center;
         align-items: center;
 
         &:hover {
-            border-color: $hoverColor;
+            border-color: $hover-color;
             opacity: 50%;
         }
 
         &:hover .starting-screen__icon path {
-            stroke: $hoverColor
+            stroke: $hover-color;
         }
     }
 }

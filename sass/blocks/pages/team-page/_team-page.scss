@@ -1,5 +1,5 @@
-@use "../../variables" as *;
-@use "../../mixins" as *;
+@use "../../../mixins" as *;
+@use "../../../variables" as *;
 @use "sass:map";
 
 $screen: ("tablet": 768px,
@@ -8,11 +8,10 @@ $screen: ("tablet": 768px,
           "desktop-hd": 1920px);
 
 .team-page {
-    padding-top: 30px;
-    padding-bottom: 60px;
+    @include paddingXX (30px, 60px);
 
     &__header {
-        @include font(700, 30px, 37px);
+        @include header-text-mobile;
         @include gradient-text();
         margin-bottom: 30px;
     }
@@ -30,8 +29,7 @@ $screen: ("tablet": 768px,
         padding-top: 0;
 
         &__header {
-            font-size: 38px;
-            line-height: 46px;
+            @include header-text-desktop;
             margin-bottom: 60px;
         }
 

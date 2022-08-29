@@ -8,32 +8,30 @@ $screen: ("tablet": 768px,
           "desktop-hd": 1920px);
 
 .category-name {
-    @include font (700, 14px, 17px, $headerColor);
-    letter-spacing: 1px;
-    text-transform: uppercase;
+    @include caps-text;
+    color: $regular-color;
     text-decoration: none;
     display: flex;
     align-items: center;
     gap: 2px;
     
     &:hover {
-        color: $hoverColor; 
+        color: $hover-color 
     }
 
     &:hover .category-name__arrow path {
-        stroke: $hoverColor; 
+        stroke: $hover-color 
     }
 
     &__header {
-        @include font (700, 30px, 36px);
+        @include header-text-mobile;
         @include gradient-text ();
     }
 }
 
 @media (min-width: map.get($screen, tablet))  {
     .category-name__header {
-        font-size: 38px;
-        line-height: 46px;
+        @include header-text-desktop;
     }
 }
 

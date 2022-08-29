@@ -1,6 +1,6 @@
 @use "./variables" as *;
 
-@mixin font ($fw, $fs, $lh, $col: $headerColor) {
+@mixin font ($fw, $fs, $lh, $col: $regular-color) {
     font-weight: $fw;
     font-size: $fs;
     line-height: $lh;
@@ -18,4 +18,56 @@
     background: linear-gradient(to right, #F0145A, 20%, #EF8080);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+@mixin regular-text ($col: $regular-color) {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: $col;
+}
+
+@mixin header-text-desktop {
+    font-weight: 700;
+    font-size: 38px;
+    line-height: 46px;
+}
+
+@mixin header-text-mobile {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 37px;
+}
+
+@mixin caps-text {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+@mixin marginY ($marginY) {
+    margin-left: $marginY;
+    margin-right: $marginY;
+}
+
+@mixin paddingX ($paddingX) {
+    padding-top: $paddingX;
+    padding-bottom: $paddingX;
+}
+
+@mixin paddingXX ($paddingTop, $paddingBottom)  {
+    padding-top: $paddingTop;
+    padding-bottom: $paddingBottom;
+}
+
+@mixin margin-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@mixin size ($width, $height: $width) {
+    width: $width;
+    height: $height;
 }

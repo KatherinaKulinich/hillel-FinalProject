@@ -9,16 +9,16 @@
     resize: none;
 
     &::placeholder {
-        @include font (400, 16px, 26px, #B3B3BA);
+        @include font (400, 16px, 26px, $secondary-text-color);
     }
     
     &:focus {
-        outline: 1px solid $headerColor;
+        outline: 1px solid $regular-color;
         border-radius: 8px;
     }
     
     &:invalid {
-        color: $hoverColor;
-        outline-color: $hoverColor;
+        color: $hover-color;
+        outline-color: $hover-color;
     }
 }

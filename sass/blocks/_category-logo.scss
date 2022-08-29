@@ -20,11 +20,11 @@ $screen: ("tablet": 768px,
         text-decoration: none;
 
         &--light {
-            color: #323264;
+            color: $main-text-color;
         }
 
         &--dark {
-            color: #FFFFFF;
+            color: $main-background;
         }
     }
 
@@ -36,8 +36,7 @@ $screen: ("tablet": 768px,
     }
 
     &__image-logo {
-        width: 70px;
-        height: 32px;
+        @include size (70px, 32px);
     }
 }
 
@@ -46,8 +45,7 @@ $screen: ("tablet": 768px,
         gap: 30px;
 
         &__image-logo {
-            width: 130px;
-            height: 60px;
+            @include size (130px, 60px);
         }
 
         &__kind {

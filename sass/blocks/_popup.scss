@@ -21,7 +21,7 @@ $screen: ("tablet": 768px,
             padding: 30px;
             width: 100%;
             max-width: 650px;
-            background-color: #F5F5FA;
+            background-color: $secondary-background;
         }
     }
 
@@ -29,7 +29,7 @@ $screen: ("tablet": 768px,
         .popup__form-box {
             padding: 30px;
             width: 100%;
-            background-color: #F5F5FA;
+            background-color: $secondary-background;
             border-radius: 12px;
             position: relative;
         }
@@ -42,15 +42,14 @@ $screen: ("tablet": 768px,
     }
 
     &__main-header {
-        @include font (700, 30px, 37px);
+        @include header-text-mobile;
         @include gradient-text ();
         margin-bottom: 30px;
     }
 
     &__secondary-header {
-        @include font (700, 14px, 17px, #B3B3BA);
-        letter-spacing: 1px;
-        text-transform: uppercase;
+        @include caps-text;
+        color: $secondary-text-color;
         margin-bottom: 15px;
     }
 
@@ -61,7 +60,6 @@ $screen: ("tablet": 768px,
     }
 
     &__cross {
-        
         position: absolute;
         top: 15px;
         right: 15px;
@@ -85,7 +83,7 @@ $screen: ("tablet": 768px,
         }
 
         &__main-header {
-            @include font (700, 38px, 46px);
+            @include header-text-desktop;
         }
     }
 }

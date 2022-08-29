@@ -1,3 +1,5 @@
+@use "./variables" as *;
+@use  "./mixins" as *;
 @use "sass:map";
 
 $screen: ("tablet": 768px,
@@ -27,8 +29,7 @@ h4 {
 .wrapper-contacts-page,
 .wrapper-team,
 .wrapper-about  {
-    margin-left: 30px;
-    margin-right: 30px;
+    @include marginY (30px);
 }
 
 .wrapper-header {
@@ -45,26 +46,22 @@ h4 {
     .wrapper-contacts-page,
     .wrapper-team,
     .wrapper-about   {
-        margin-left: 60px;
-        margin-right: 60px;
+        @include marginY (60px);
     }
 }
 
 @media (min-width: map.get($screen, laptop)) {
     .wrapper-benefits,
     .wrapper-header-desktop {
-        margin-right: 60px;
-        margin-left: 60px;
+        @include marginY (60px);
     }
 
     .wrapper-benefits-description {
-        margin-left: 0;
-        margin-right: 0;
+        @include marginY (0px);
     }
 
     .wrapper-header {
-        margin-left: 0;
-        margin-right: 0;
+        @include marginY (0px);
     }
 }
 
@@ -73,23 +70,19 @@ h4 {
     .wrapper-contacts-page,
     .wrapper-team,
     .wrapper-about  {
-        margin-left: 180px;
-        margin-right: 180px;
+        @include marginY (180px);
     }
 }
 
 @media (min-width: map.get($screen, desktop-hd)) {
     .wrapper,
     .wrapper-header-desktop {
-        width: 1600px;
-        margin-left: auto;
-        margin-right: auto;
+        @include margin-auto;
     }
 
     .wrapper-secondary {
         width: 1720px;
-        margin-left: auto;
-        margin-right: auto;
+        @include margin-auto;
     }
 
     .wrapper-publications,
@@ -97,7 +90,6 @@ h4 {
     .wrapper-team,
     .wrapper-about   {
         width: 1360px;
-        margin-left: auto;
-        margin-right: auto;
+        @include margin-auto;
     }
 }

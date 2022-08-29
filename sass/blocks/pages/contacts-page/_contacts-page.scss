@@ -1,5 +1,5 @@
-@use "../../variables" as *;
-@use "../../mixins" as *;
+@use "../../../mixins" as *;
+@use "../../../variables" as *;
 @use "sass:map";
 
 
@@ -9,8 +9,7 @@ $screen: ("tablet": 768px,
           "desktop-hd": 1920px);
 
 .contacts-page {
-    padding-top: 15px;
-    padding-bottom: 30px;
+    @include paddingXX (15px, 30px);
     display: flex;
     flex-direction: column;
     gap: 30px;
@@ -22,15 +21,14 @@ $screen: ("tablet": 768px,
     }
 
     &__adress {
-        @include font (400, 21px, 30px, #323264);
+        @include font (400, 21px, 30px, $main-text-color);
         font-style: normal;
     }
 
     &__connection {
-        padding-top: 30px;
-        padding-bottom: 30px;
-        border-top: 4px solid #E6E6F0;
-        border-bottom: 4px solid #E6E6F0;
+        @include paddingX (30px);
+        border-top: $separator;
+        border-bottom: $separator;
         display: flex;
         flex-direction: column;
         gap: 15px;
@@ -46,7 +44,7 @@ $screen: ("tablet": 768px,
         text-decoration: none;
 
         &:hover {
-            color: $hoverColor;
+            color: $hover-color;
         }
     }
 
@@ -59,8 +57,8 @@ $screen: ("tablet": 768px,
 
         &:hover path,
         &:hover .contacts-page__facebook-text {
-            fill: $hoverColor;
-            color: $hoverColor;
+            fill: $hover-color;
+            color: $hover-color;
         }
     }
 
@@ -76,8 +74,7 @@ $screen: ("tablet": 768px,
 
 @media (min-width: map.get($screen, tablet)) {
     .contacts-page {
-        padding-top: 0;
-        padding-bottom: 60px;
+        @include paddingXX (0px, 60px);
         gap: 60px;
         justify-content: space-between;
     }

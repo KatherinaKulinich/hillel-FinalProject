@@ -1,5 +1,5 @@
-@use "../../variables" as *;
-@use "../../mixins" as *;
+@use "../../../mixins" as *;
+@use "../../../variables" as *;
 @use "sass:map";
 
 
@@ -9,8 +9,7 @@ $screen: ("tablet": 768px,
           "desktop-hd": 1920px);
 
 .publications {
-    padding-top: 32px;
-    padding-bottom: 60px;
+    @include paddingXX (32px, 60px);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -30,20 +29,15 @@ $screen: ("tablet": 768px,
         background-color: transparent;
         border-radius: 10px;
         border: none;
-        @include font (700, 16px, 20px, #323264);
+        @include regular-text ($main-text-color);
 
         &:hover {
-        background-color: #F5F5FA;
+        background-color: $secondary-background;
         }
 
         &--active {
-            background-color: #FFFFFF;
+            background-color: $main-background;
         }
-    }
-
-    &__main-button {
-        margin-right: auto;
-        margin-left: auto;
     }
 }
 

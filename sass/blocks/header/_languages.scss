@@ -7,22 +7,22 @@
 
     &__item {
         text-decoration: none;
-            letter-spacing: 1px;
-            padding: 5px 7px;
-            border-radius: 8px;
-            background-color: transparent; 
-            @include font (700, 12px, 15px);
+        letter-spacing: 1px;
+        padding: 5px 7px;
+        border-radius: 8px;
+        background-color: transparent; 
+        @include font (700, 12px, 15px);
 
         &--dark  {
-            color: #FFFFFF;
+            color: $main-background
         }
 
         &--light {
-            color: #B3B3BA;
+            color: $secondary-text-color;
         }
 
         &--active {
-            background-color: $hoverColor;
+            background-color: $hover-color;
             color: #FFFFFF;
         }
     }

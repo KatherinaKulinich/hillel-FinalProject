@@ -1,5 +1,5 @@
-@use "../../variables" as *;
-@use "../../mixins" as *;
+@use "../../../mixins" as *;
+@use "../../../variables" as *;
 @use "sass:map";
 
 $screen: ("tablet": 768px,
@@ -50,31 +50,31 @@ $screen: ("tablet": 768px,
         grid-row: 1/-1;
         align-self: center;
         justify-self: end;
-        background-color: #F5F5FA;
+        background-color: $secondary-background;
         padding: 10px 13px;
         border-radius: 50%;
 
         &:hover path {
-            stroke: $hoverColor;
+            stroke: $hover-color;
         }
     }
 
     &__name {
         grid-column: 1/2;
         grid-row: 1/2;
-        @include font(700, 16px, 20px, #323264);
+        @include font(700, 16px, 20px, $main-text-color);
         text-decoration: none;
         margin-bottom: 5px;
 
         &:hover {
-            color: $hoverColor;
+            color: $hover-color;
         }
     }
 
     &__job {
         grid-column: 1/2;
         grid-row: 2/3;
-        @include font(400, 14px, 22px, #B3B3BA);
+        @include font(400, 14px, 22px, $secondary-text-color);
         margin-bottom: 0;
     }
 }

@@ -4,16 +4,16 @@
 .contacts {
 
     &__adress {
-        @include font (400, 16px, 20px);
+        @include regular-text;
         font-style: normal;
         position: relative;
 
         &--dark {
-            color: #323264;
+            color: $main-text-color;
         }
 
         &--light {
-            color: #B3B3BA;
+            color: $secondary-text-color;
         }
     }
 
@@ -25,7 +25,7 @@
         position: relative;
 
         &:hover {
-            color: $hoverColor;
+            color: $hover-color;
         }
     }
 
@@ -33,15 +33,14 @@
         position: relative;
         
         &:hover .contacts__facebook-icon path {
-            fill: $hoverColor
+            fill: $hover-color;
         }
     }
 
     &__facebook-icon {
         
         &--light {
-            width: 24px;
-            height: 24px;
+            @include size (24px);
             vertical-align: middle
         } 
 
@@ -49,7 +48,7 @@
     }
 
     &__tel {
-        @include font (700, 16px, 20px);
+        @include regular-text;
         text-decoration: none;
         position: relative;
 
@@ -58,21 +57,21 @@
         }
 
         &--light {
-            color: #FFFFFF;
+            color: $main-background
         }
 
         &--medium {
-            color: #B3B3BA;
+            color: $secondary-text-color
         }
     }
 
     &__mail {
-        @include font (700, 16px, 20px);
+        @include regular-text;
         text-decoration: none;
         position: relative;
 
         &:hover {
-            color: $hoverColor;
+            color: $hover-color;
         }
     }
 }

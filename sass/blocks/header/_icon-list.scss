@@ -24,7 +24,7 @@ $screen: ("tablet": 768px,
     }
     
     &__header {
-        @include font (700, 22px, 27px, $headerColor);
+        @include font (700, 22px, 27px, $regular-color);
         margin-top: 0;
         margin-bottom: 15px;
         width: 100%;
@@ -32,7 +32,7 @@ $screen: ("tablet": 768px,
         text-decoration: none;
 
         &:hover {
-            color: $hoverColor;
+            color: $hover-color;
         }
     }
     

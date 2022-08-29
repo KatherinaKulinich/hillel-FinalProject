@@ -11,9 +11,8 @@ $screen: ("tablet": 768px,
     text-align: center;
 
     &__header {
-        @include font (700, 14px, 17px, #323264);
-        letter-spacing: 1px;
-        text-transform: uppercase;
+        @include caps-text;
+        color: $main-text-color;
         text-decoration: none;
         display: inline-block;
         margin-bottom: 30px;
