@@ -25,10 +25,7 @@ h4 {
 
 .wrapper,
 .wrapper-benefits-description,
-.wrapper-publications,
-.wrapper-contacts-page,
-.wrapper-team,
-.wrapper-about  {
+.wrapper-secondary  {
     @include marginY (30px);
 }
 
@@ -42,10 +39,7 @@ h4 {
     .wrapper,
     .wrapper-benefits-description,
     .wrapper-header,
-    .wrapper-publications,
-    .wrapper-contacts-page,
-    .wrapper-team,
-    .wrapper-about   {
+    .wrapper-secondary  {
         @include marginY (60px);
     }
 }
@@ -66,10 +60,7 @@ h4 {
 }
 
 @media (min-width: map.get($screen, desktop-sd)) {
-    .wrapper-publications,
-    .wrapper-contacts-page,
-    .wrapper-team,
-    .wrapper-about  {
+    .wrapper-secondary  {
         @include marginY (180px);
     }
 }
@@ -77,19 +68,17 @@ h4 {
 @media (min-width: map.get($screen, desktop-hd)) {
     .wrapper,
     .wrapper-header-desktop {
-        @include margin-auto;
+        width: 1600px;
+        @include margin-auto ();
+    }
+
+    .wrapper-clients {
+        width: 1720px;
+        @include margin-auto ();
     }
 
     .wrapper-secondary {
-        width: 1720px;
-        @include margin-auto;
-    }
-
-    .wrapper-publications,
-    .wrapper-contacts-page,
-    .wrapper-team,
-    .wrapper-about   {
         width: 1360px;
-        @include margin-auto;
+        @include margin-auto (); 
     }
 }

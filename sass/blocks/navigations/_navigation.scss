@@ -27,10 +27,6 @@ $screen: ("tablet": 768px,
             @include font (700, 16px, 20px);
             text-decoration: none;
 
-            &:hover {
-                color: $hover-color;
-            }
-
             &--dark {
                 color: #FFFFFF;
             }
@@ -47,6 +43,13 @@ $screen: ("tablet": 768px,
 @media (min-width: map.get($screen, laptop))  {
     .navigation {
         padding: 0;
+    }
+}
+
+
+@media (min-width: map.get($screen, laptop)) {
+    .navigation__item:hover  {
+        color: $hover-color;
     }
 }
 

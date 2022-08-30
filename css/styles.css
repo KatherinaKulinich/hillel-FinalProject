@@ -339,10 +339,7 @@ h4 {
 
 .wrapper,
 .wrapper-benefits-description,
-.wrapper-publications,
-.wrapper-contacts-page,
-.wrapper-team,
-.wrapper-about {
+.wrapper-secondary {
   margin-left: 30px;
   margin-right: 30px;
 }
@@ -356,10 +353,7 @@ h4 {
   .wrapper,
 .wrapper-benefits-description,
 .wrapper-header,
-.wrapper-publications,
-.wrapper-contacts-page,
-.wrapper-team,
-.wrapper-about {
+.wrapper-secondary {
     margin-left: 60px;
     margin-right: 60px;
   }
@@ -380,10 +374,7 @@ h4 {
   }
 }
 @media (min-width: 1440px) {
-  .wrapper-publications,
-.wrapper-contacts-page,
-.wrapper-team,
-.wrapper-about {
+  .wrapper-secondary {
     margin-left: 180px;
     margin-right: 180px;
   }
@@ -391,18 +382,16 @@ h4 {
 @media (min-width: 1920px) {
   .wrapper,
 .wrapper-header-desktop {
+    width: 1600px;
     margin-left: auto;
     margin-right: auto;
   }
-  .wrapper-secondary {
+  .wrapper-clients {
     width: 1720px;
     margin-left: auto;
     margin-right: auto;
   }
-  .wrapper-publications,
-.wrapper-contacts-page,
-.wrapper-team,
-.wrapper-about {
+  .wrapper-secondary {
     width: 1360px;
     margin-left: auto;
     margin-right: auto;
@@ -1168,9 +1157,6 @@ h4 {
     color: #24A3FF;
     text-decoration: none;
   }
-  .navigation__item:hover {
-    color: #F0145A;
-  }
   .navigation__item--dark {
     color: #FFFFFF;
   }
@@ -1183,6 +1169,11 @@ h4 {
 @media (min-width: 1024px) {
   .navigation {
     padding: 0;
+  }
+}
+@media (min-width: 1024px) {
+  .navigation__item:hover {
+    color: #F0145A;
   }
 }
 .navigation-mobile {
