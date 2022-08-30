@@ -14,11 +14,19 @@
         @include font (700, 12px, 15px);
 
         &--dark  {
-            color: $main-background
+            color: $main-background;
+
+            &:hover {
+                background-color: rgba(255, 255, 255, 0.2);
+            }
         }
 
         &--light {
             color: $secondary-text-color;
+
+            &:hover {
+                background-color: rgba(245, 245, 250, 1);
+            }
         }
 
         &--active {

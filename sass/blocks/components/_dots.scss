@@ -11,7 +11,7 @@ $screen: ("tablet": 768px,
         &--gray::before {
             content: url("../images/svg/dot.svg");
             position: absolute;
-            left: -13px;
+            left: -14px;
             top: 50%;
             transform: translateY(-50%);
         }
@@ -22,6 +22,7 @@ $screen: ("tablet": 768px,
             left: -12px;
             top: 50%;
             transform: translateY(-50%);
+            
         }
     }
 }

@@ -26,15 +26,24 @@ $screen: ("tablet": 768px,
         &__item {
             @include font (700, 16px, 20px);
             text-decoration: none;
+            padding-bottom: 3px;
+            border-bottom: 2px solid transparent;
+
+            &:hover {
+                border-color: $regular-color;
+            }
 
             &--dark {
                 color: #FFFFFF;
+
+                &:hover {
+                    border-color: #FFFFFF;
+                }
             }
     
             &--active {
                 color: $hover-color;
-                padding-bottom: 3px;
-                border-bottom: 2px solid $hover-color;
+                border-color: $hover-color;
             }
         }
     }
@@ -46,10 +55,4 @@ $screen: ("tablet": 768px,
     }
 }
 
-
-@media (min-width: map.get($screen, laptop)) {
-    .navigation__item:hover  {
-        color: $hover-color;
-    }
-}
 
