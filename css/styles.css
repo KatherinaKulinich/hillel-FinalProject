@@ -2475,18 +2475,15 @@ h4 {
     gap: 40px;
   }
   .awards__image-background {
-    width: 132px;
-    height: 90px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    width: calc(25% - 30px);
   }
   .awards__image-background:nth-child(n+2) {
     display: flex;
   }
 }
-@media (min-width: 768px) {
-  .awards__image-background {
-    width: 196px;
-    height: 110px;
-  }
+@media (min-width: 1024px) {
   .awards__image {
     height: 60px;
   }

@@ -47,7 +47,6 @@ $screen: ("tablet": 768px,
     .awards {
 
         &__slider-button {
-
             &:nth-child(n+4) {
                 display: none;
             }
@@ -59,7 +58,8 @@ $screen: ("tablet": 768px,
         }
     
         &__image-background {
-            @include size (132px, 90px);
+            @include paddingX (25px);
+            width: calc(25% - 30px);
 
             &:nth-child(n+2) {
                 display: flex;
@@ -68,12 +68,8 @@ $screen: ("tablet": 768px,
     }
 }
 
-@media (min-width: map.get($screen, tablet)) {
+@media (min-width: map.get($screen, laptop)) {
     .awards {
-
-        &__image-background {
-            @include size (196px, 110px);
-        }
 
         &__image {
             height: 60px;
