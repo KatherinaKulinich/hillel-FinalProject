@@ -9,7 +9,7 @@ $screen: ("tablet": 768px,
           "desktop-hd": 1920px);
 
 .contacts-page {
-    @include paddingXX (15px, 30px);
+    @include paddingYY (15px, 30px);
     display: flex;
     flex-direction: column;
     gap: 30px;
@@ -26,7 +26,7 @@ $screen: ("tablet": 768px,
     }
 
     &__connection {
-        @include paddingX (30px);
+        @include paddingY (30px);
         border-top: $separator;
         border-bottom: $separator;
         display: flex;
@@ -74,7 +74,7 @@ $screen: ("tablet": 768px,
 
 @media (min-width: map.get($screen, tablet)) {
     .contacts-page {
-        @include paddingXX (0px, 60px);
+        @include paddingYY (0px, 60px);
         gap: 60px;
         justify-content: space-between;
     }

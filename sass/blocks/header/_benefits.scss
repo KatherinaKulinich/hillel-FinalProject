@@ -36,7 +36,7 @@ $screen: ("tablet": 768px,
     }
 
     &__description {
-        @include paddingXX (30px, 15px);
+        @include paddingYY (30px, 15px);
         border-top: 4px solid rgba(255, 255, 255, 0.3);
     }
 
@@ -67,7 +67,7 @@ $screen: ("tablet": 768px,
         }
 
         &__description {
-            @include paddingXX (60px, 30px);
+            @include paddingYY (60px, 30px);
         }
 
         &__item {
@@ -79,7 +79,7 @@ $screen: ("tablet": 768px,
 @media (min-width: map.get($screen, laptop)) {
     .benefits {
         flex-direction: row;
-        @include paddingX (70px);
+        @include paddingY (70px);
         align-items: center;
         justify-content:  center;
         column-gap: 60px; 
@@ -97,7 +97,7 @@ $screen: ("tablet": 768px,
 
         &__description {
             border-top: none;
-            @include paddingX (0);
+            @include paddingY (0);
             max-width: 581px;
         }
 

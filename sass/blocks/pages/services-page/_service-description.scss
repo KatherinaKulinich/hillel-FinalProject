@@ -10,7 +10,7 @@ $screen: ("tablet": 768px,
 .service-description {
 
     &__main {
-        @include paddingXX (40px, 30px);
+        @include paddingYY (40px, 30px);
         display: flex;
         flex-direction: column;
         gap: 28px;
@@ -30,7 +30,7 @@ $screen: ("tablet": 768px,
     }
 
     &__benefits {
-        @include paddingXX (30px, 60px);
+        @include paddingYY (30px, 60px);
         border-top: 4px solid rgba(255, 255, 255, 0.5);
     }
 
@@ -76,7 +76,7 @@ $screen: ("tablet": 768px,
     .service-description {
 
         &__main {
-            @include paddingXX (0px, 60px);
+            @include paddingYY (0px, 60px);
             @include margin-auto;
         }
 

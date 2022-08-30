@@ -14,10 +14,7 @@ $screen: ("tablet": 768px,
         display: none;
 
         .popup__form-box {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+            @include center;
             padding: 30px;
             width: 100%;
             max-width: 650px;

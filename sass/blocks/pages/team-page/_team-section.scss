@@ -8,7 +8,7 @@ $screen: ("tablet": 768px,
           "desktop-hd": 1920px);
 
 .team-section {
-    @include paddingXX (50px, 30px);
+    @include paddingYY (50px, 30px);
     &__card {
         display: flex;
         flex-direction: column;

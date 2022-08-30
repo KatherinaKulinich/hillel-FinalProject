@@ -9,7 +9,7 @@ $screen: ("tablet": 768px,
           "desktop-hd": 1920px);
 
 .publications {
-    @include paddingXX (32px, 60px);
+    @include paddingYY (32px, 60px);
     display: flex;
     flex-direction: column;
     align-items: center;

@@ -9,7 +9,7 @@ $screen: ("tablet": 768px,
           "desktop-hd": 1920px);
 
 .footer {
-    @include paddingX (30px);
+    @include paddingY (30px);
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -24,7 +24,7 @@ $screen: ("tablet": 768px,
         display: flex;
         flex-direction: column;
         gap: 10px;
-        @include paddingXX (20px, 30px);
+        @include paddingYY (20px, 30px);
     }
 
     &__copyright {

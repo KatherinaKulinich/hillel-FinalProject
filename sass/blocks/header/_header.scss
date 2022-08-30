@@ -10,7 +10,7 @@ $screen: ("tablet": 768px,
 .header {
     
     &__blackout {
-        @include paddingX (10px);
+        @include paddingY (10px);
 
         &--dark {
             background-color: rgba(245, 245, 250, 0.2);
@@ -35,7 +35,7 @@ $screen: ("tablet": 768px,
     &__logo-mobile {
         display: flex;
         justify-content: space-between;
-        @include paddingX (15px);
+        @include paddingY (15px);
     }
 
     &__logo-icon {
@@ -56,10 +56,10 @@ $screen: ("tablet": 768px,
 
 @media (min-width: map.get($screen, tablet)) {
     .header {
-        @include paddingXX (60px, 35px);
+        @include paddingYY (60px, 35px);
 
         &__blackout {
-            @include paddingX (15px);
+            @include paddingY (15px);
             background-color: transparent;
         }
 
@@ -122,7 +122,7 @@ $screen: ("tablet": 768px,
             }
 
             &__logo-mobile {
-                @include paddingX (0);
+                @include paddingY (0);
             }
         }
     }

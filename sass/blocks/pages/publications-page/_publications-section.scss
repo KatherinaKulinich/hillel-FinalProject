@@ -8,7 +8,7 @@ $screen: ("tablet": 768px,
           "desktop-hd": 1920px);
 
 .publications-section {
-    @include paddingX (30px);
+    @include paddingY (30px);
 
     &__category {
         margin-bottom: 5px;

@@ -22,7 +22,7 @@ $screen: ("tablet": 768px,
     }
 
     &__post-main {
-        @include paddingX (30px);
+        @include paddingY (30px);
         border-bottom: $separator;
     }
 

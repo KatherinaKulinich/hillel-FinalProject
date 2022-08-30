@@ -8,7 +8,7 @@ $screen: ("tablet": 768px,
           "desktop-hd": 1920px);
 
 .team-item {
-    @include paddingX (30px);
+    @include paddingY (30px);
     display: flex;
     flex-direction: column;
     gap: 30px;
@@ -65,7 +65,7 @@ $screen: ("tablet": 768px,
 
 @media (min-width: map.get($screen, tablet)) {
     .team-item {
-        @include paddingXX (0, 60px);
+        @include paddingYY (0, 60px);
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto auto;

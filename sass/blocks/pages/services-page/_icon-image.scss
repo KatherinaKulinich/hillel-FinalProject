@@ -8,49 +8,31 @@
 
     &--ecommerce::after {
         content: url("../images/svg/services/ecommerce.svg");
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        @include center;
     }
 
     &--support::after {
         content: url("../images/svg/services/support.svg");
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        @include center;
     }
 
     &--coprorate::after {
         content: url("../images/svg/services/coprorate.svg");
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        @include center;
     }
 
     &--trust::after {
         content: url("../images/svg/services/trust.svg");
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        @include center;
     }
 
     &--protection::after {
         content: url("../images/svg/services/protection.svg");
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        @include center;
     }
 
     &--court::after {
         content: url("../images/svg/services/court.svg");
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        @include center;
     }
 }

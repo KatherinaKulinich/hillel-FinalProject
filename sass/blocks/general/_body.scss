@@ -12,11 +12,11 @@ $screen: ("tablet": 768px,
     &__icon-section {
 
         &--homepage {
-            @include paddingXX (30px, 60px);
+            @include paddingYY (30px, 60px);
         } 
 
         &--services-page {
-            @include paddingXX (0px, 60px);
+            @include paddingYY (0px, 60px);
         }
     }
 

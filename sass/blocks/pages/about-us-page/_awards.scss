@@ -19,7 +19,7 @@ $screen: ("tablet": 768px,
     }
 
     &__gallery {
-        @include paddingX (30px);
+        @include paddingY (30px);
         display: flex;
         justify-content: center;
     }
@@ -58,7 +58,7 @@ $screen: ("tablet": 768px,
         }
     
         &__image-background {
-            @include paddingX (25px);
+            @include paddingY (25px);
             width: calc(25% - 30px);
 
             &:nth-child(n+2) {

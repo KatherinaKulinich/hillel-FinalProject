@@ -79,8 +79,6 @@ $screen: ("tablet": 768px,
     }
 }
 
-
-
 @media (min-width: map.get($screen, tablet)) {
     .team-card {
         width: calc(50% - 30px);

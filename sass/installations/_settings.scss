@@ -26,7 +26,7 @@ h4 {
 .wrapper,
 .wrapper-benefits-description,
 .wrapper-secondary  {
-    @include marginY (30px);
+    @include marginX (30px);
 }
 
 .wrapper-header {
@@ -40,28 +40,28 @@ h4 {
     .wrapper-benefits-description,
     .wrapper-header,
     .wrapper-secondary  {
-        @include marginY (60px);
+        @include marginX (60px);
     }
 }
 
 @media (min-width: map.get($screen, laptop)) {
     .wrapper-benefits,
     .wrapper-header-desktop {
-        @include marginY (60px);
+        @include marginX (60px);
     }
 
     .wrapper-benefits-description {
-        @include marginY (0px);
+        @include marginX (0px);
     }
 
     .wrapper-header {
-        @include marginY (0px);
+        @include marginX (0px);
     }
 }
 
 @media (min-width: map.get($screen, desktop-sd)) {
     .wrapper-secondary  {
-        @include marginY (180px);
+        @include marginX (180px);
     }
 }
 

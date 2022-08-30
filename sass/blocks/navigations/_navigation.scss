@@ -16,7 +16,7 @@ $screen: ("tablet": 768px,
 @media (min-width: map.get($screen, tablet)) {
     .navigation {
         display: flex;
-        @include paddingX (15px);
+        @include paddingY (15px);
 
         &__menu {
             display: flex;
