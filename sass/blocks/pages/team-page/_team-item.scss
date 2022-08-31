@@ -91,6 +91,7 @@ $screen: ("tablet": 768px,
 @media (min-width: map.get($screen, laptop)) {
     .team-item {
         column-gap: 60px;
+        row-gap: 0;
         grid-template-columns: 300px 1fr;
 
         &__image {

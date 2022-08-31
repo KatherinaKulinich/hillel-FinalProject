@@ -9,6 +9,7 @@ $screen: ("tablet": 768px,
 
 .team-section {
     @include paddingYY (50px, 30px);
+    
     &__card {
         display: flex;
         flex-direction: column;
@@ -17,7 +18,7 @@ $screen: ("tablet": 768px,
 
     &__photo {
         height: 500px;
-        @include bg-img ("../images/partner.png");
+        @include bg-img ("../images/team-1.jpg");
         border-top-left-radius: 12px;
         border-top-right-radius: 12px;
         overflow: hidden;

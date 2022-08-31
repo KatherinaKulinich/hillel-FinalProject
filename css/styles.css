@@ -721,7 +721,7 @@ h4 {
   color: #B3B3BA;
 }
 .languages__item--light:not(.languages__item--active):hover {
-  background-color: rgb(245, 245, 250);
+  background-color: rgb(237, 237, 247);
 }
 .languages__item--active {
   background-color: #F0145A;
@@ -1146,6 +1146,7 @@ h4 {
     color: #FFFFFF;
   }
   .navigation__item--dark:hover {
+    color: #FFFFFF;
     border-color: #FFFFFF;
   }
   .navigation__item--active {
@@ -1732,6 +1733,7 @@ h4 {
 @media (min-width: 1024px) {
   .team-item {
     column-gap: 60px;
+    row-gap: 0;
     grid-template-columns: 300px 1fr;
   }
   .team-item__image {
@@ -1807,7 +1809,7 @@ h4 {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url("../images/partner.png");
+  background-image: url("../images/team-1.jpg");
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
   overflow: hidden;
