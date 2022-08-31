@@ -11,7 +11,7 @@ $screen: ("tablet": 768px,
     @include caps-text;
     color: $regular-color;
     text-decoration: none;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     gap: 2px;
     

@@ -17,7 +17,7 @@ $screen: ("tablet": 768px,
     &__header {
         @include header-text-desktop;
         color: $main-background;
-        @include marginX (0);
+        margin-bottom: 0;
         min-width: 315px;
         text-align: center; 
         @include center;

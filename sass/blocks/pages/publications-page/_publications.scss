@@ -31,12 +31,12 @@ $screen: ("tablet": 768px,
         border: none;
         @include regular-text ($main-text-color);
 
-        &:hover {
-        background-color: $secondary-background;
-        }
-
         &--active {
             background-color: $main-background;
+        }
+
+        &:not(.publications__button--active):hover {
+            background-color: $secondary-background;
         }
     }
 }

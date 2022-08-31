@@ -12,6 +12,13 @@ $screen: ("tablet": 768px,
     border-bottom-right-radius: 12px;
     position: relative;
 
+    &--homepage {
+        @include paddingYY (30px, 60px);
+    } 
+
+    &--services-page {
+        @include paddingYY (30px, 60px);
+    }
     
     &__category {
         margin-bottom: 10px;
@@ -19,8 +26,9 @@ $screen: ("tablet": 768px,
     
     &__header {
         margin-bottom: 30px;
-    }
+    }  
 }
+
 
 
 @media (min-width: map.get($screen, tablet)) {
@@ -28,6 +36,14 @@ $screen: ("tablet": 768px,
 
         &__header {
             margin-bottom: 60px;
+        }
+
+        &--homepage {
+            padding-top: 15px;
+        } 
+
+        &--services-page {
+            @include paddingYY (0, 60px);
         }
     }
 }

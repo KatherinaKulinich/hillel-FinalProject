@@ -46,7 +46,7 @@
     }
 
     &__tel {
-        @include regular-text;
+        @include font (700, 16px, 19px);
         text-decoration: none;
         position: relative;
 

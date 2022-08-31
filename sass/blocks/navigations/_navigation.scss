@@ -16,7 +16,6 @@ $screen: ("tablet": 768px,
 @media (min-width: map.get($screen, tablet)) {
     .navigation {
         display: flex;
-        @include paddingY (15px);
 
         &__menu {
             display: flex;
@@ -30,6 +29,7 @@ $screen: ("tablet": 768px,
             border-bottom: 2px solid transparent;
 
             &:hover {
+                color: $regular-color;
                 border-color: $regular-color;
             }
 
@@ -46,12 +46,6 @@ $screen: ("tablet": 768px,
                 border-color: $hover-color;
             }
         }
-    }
-}
-
-@media (min-width: map.get($screen, laptop))  {
-    .navigation {
-        padding: 0;
     }
 }
 

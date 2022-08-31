@@ -8,38 +8,47 @@ $screen: ("tablet": 768px,
           "desktop-hd": 1920px);
 
 .body {
-   
-    &__icon-section {
 
-        &--homepage {
-            @include paddingYY (30px, 60px);
-        } 
-
-        &--services-page {
-            @include paddingYY (0px, 60px);
-        }
+    &__background-main {
+        background-color: $main-background;
     }
 
-    &____clients-section {
+    &__background-gradient {
+        background: linear-gradient(to bottom left, #323264, 60%, #643E72);
+        position: relative;
+
+        &::before{
+            content: '';
+            background-color: #CACADB;
+            height: 10px;
+            border-bottom-left-radius: 12px;
+            border-bottom-right-radius: 12px;
+            position: absolute;
+            bottom: -10px;
+            left: 20px;
+            right: 20px;   
+        }
         
-        &--homepage {
-            padding-top: 30px;
-        }
-
-        &--services-page {
-            padding-top: 70px;
-        }
-    }
-
-    &__publication-section {
-
-        &--services-page {
-            padding-top: 80px;
+        &::after {
+            content: '';
+            background-color: #E7E7F2;
+            height: 10px;
+            border-bottom-left-radius: 12px;
+            border-bottom-right-radius: 12px;
+            position: absolute;
+            bottom: -20px;
+            left: 40px;
+            right: 40px;
         }
     }
 
-    &__footer-section {
-        border-top: 2px solid #E6E6F0;
+    &__background-secondary {
+        background-color: $secondary-background;
+    }
+
+    &__space {
+        height: 80px;
+        background-color: $main-background;
     }
 
     &__popup {
@@ -50,27 +59,8 @@ $screen: ("tablet": 768px,
         left: 0;
         background-color: rgba(50, 50, 100, 0.7);
     }
-}
 
-@media (min-width: map.get($screen, tablet)) {
-    .body {
-        &__icon-section {
-
-            &--homepage {
-                padding-top: 15px;
-            } 
-        }
-
-        &____clients-section {
-        
-            &--homepage {
-                padding-top: 60px;
-            }
-    
-            &--services-page {
-                padding-top: 80px;
-            }
-        }
+    &__footer-separator {
+        border-top: 2px solid #E6E6F0;
     }
 }
-

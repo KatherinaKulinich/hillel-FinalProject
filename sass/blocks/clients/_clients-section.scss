@@ -17,12 +17,28 @@ $screen: ("tablet": 768px,
         display: inline-block;
         margin-bottom: 30px;
     }
+
+    &--homepage {
+        padding-top: 30px;
+    }
+
+    &--services-page {
+        padding-top: 70px;
+    }
 }
 
 @media (min-width: map.get($screen, desktop-hd)) {
     
     .clients-section {
         padding-bottom: 60px;
+
+        &--homepage {
+            padding-top: 60px;
+        }
+
+        &--services-page {
+            padding-top: 80px;
+        }
     }
 }
 
