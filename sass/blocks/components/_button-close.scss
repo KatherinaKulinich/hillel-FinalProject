@@ -2,9 +2,9 @@
     @include size (32px);
     border: none;
     background-color: rgba(245, 245, 250, 0.1);
-    background-image: url("../images/svg/close.svg");
-    background-position: center;
-    background-repeat: no-repeat;
+    // background-image: url("../images/svg/close.svg");
+    // background-position: center;
+    // background-repeat: no-repeat;
 
     &:hover {
         background-color: rgba(230, 230, 240, 0.5);
